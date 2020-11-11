@@ -69,5 +69,21 @@ def new_post():
         )
 
 
+def has_read_this_url(url: str = ""):
+    """
+    判断是否已经添加了 @url 对应的博客
+    """
+    assert url.strip() != ""
+    files = [f for f in os.listdir("weekly") if f.endswith("md")]
+    for file in files:
+        with open(f"weekly/{file}", encoding="utf-8") as f:
+            for idx, line in enumerate(f):
+                if line.find(url) >= 0:
+                    print(f"{url} has been found: {file}:{idx}!")
+                    return
+    print(f"{url} has not been read!")
+
+
 if __name__ == "__main__":
     new_post()
+    has_read_this_url("https://github.com/taseikyo/")
