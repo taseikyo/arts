@@ -21,11 +21,11 @@ arts 的想法由 [陈浩](https://github.com/haoel) 提出：
 
 ## Weeklys
 
-OK! 3 posts in total. Keep going!
+Nice! 3 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
-| [202011W1](weekly/202011W1.md) | [202011W2](weekly/202011W2.md) | [202011W3](weekly/202011W3.md) |||
+| [202011W1](weekly/202011W1.md) | [202011W2](weekly/202011W2.md) | [202011W3](weekly/202011W3.md) | | | |
 
 ## License
 
