@@ -140,5 +140,62 @@ def update_readme():
         f.write(license)
 
 
+def update_summary():
+    """
+    由于 gitbook 展示列表乱序，听说是根据 SUMMARY 来的
+    于是在更新 README 的时候顺便更新
+    """
+    files = os.listdir("weekly")
+    files.sort(reverse=True)
+    nums = len(files)
+    # 按 【年 - 月 - 第 x 期：share 的主题】排列
+    month_table = {
+        "01": "一",
+        "02": "二",
+        "03": "三",
+        "04": "四",
+        "05": "五",
+        "06": "六",
+        "07": "七",
+        "08": "八",
+        "09": "九",
+        "10": "十",
+        "11": "十一",
+        "12": "十二",
+    }
+    current_year = ""
+    current_month = ""
+    summary_list = ["# SUMMARY\n", "- [关于本书](README.md)\n"]
+    for idx, file in enumerate(files):
+        with open(f"weekly/{file}", encoding="utf-8") as f:
+            lines = f.readlines()
+            for x, line in enumerate(lines):
+                if line.find("## share") == 0:
+                    topic = lines[x + 2]
+        # 去掉链接，前面的序号，以及中英的标记
+        topic = topic.split("](")[0].split("1. ")[-1].split("（")[0].strip()
+        if topic[0] == "[":
+            topic = topic[1:]
+
+        if current_year != file[:4]:
+            current_year = file[:4]
+            tmp = f"\n## {current_year}\n"
+            summary_list.append(tmp)
+
+        if current_month != file[4:6]:
+            current_month = file[4:6]
+            tmp = f"\n### {month_table[current_month]}月\n"
+            summary_list.append(tmp)
+
+        tmp = f"- [第 {nums-idx} 期：{topic}](weekly/{file})"
+        summary_list.append(tmp)
+
+    summary_list.append("")
+
+    with open("SUMMARY.md", "w", encoding="utf-8") as f:
+        f.write("\n".join(summary_list).replace("\n\n\n", "\n\n"))
+
+
 if __name__ == "__main__":
     update_readme()
+    update_summary()
