@@ -56,8 +56,13 @@ def new_post():
     current_date = time.strftime("%Y-%m-%d", time.localtime())
     current_month = time.strftime("%Y%m", time.localtime())
     # 202011W1.md
-    current_name = f"{current_month}W{int(files[-1][-4])+1}.md"
-    next_name = f"{current_month}W{int(files[-1][-4])+2}.md"
+    if current_month == files[-1][:6]:
+        current_name = f"{current_month}W{int(files[-1][-4])+1}.md"
+        next_name = f"{current_month}W{int(files[-1][-4])+2}.md"
+    else:
+        current_name = f"{files[-1][:6]}W{int(files[-1][-4])+1}.md"
+        next_name = f"{files[-1][:6]}W{int(files[-1][-4])+2}.md"
+    print(f"{current_name=} {next_name=}")
     with open(f"weekly/{current_name}", "w", encoding="utf-8") as f:
         f.write(
             TEMPLATE.format(
