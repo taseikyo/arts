@@ -97,7 +97,7 @@ def update_readme():
         lines = f.readlines()
 
     for i, x in enumerate(lines):
-        if x.find("Weeklys") > 0:
+        if x.find("Calendar") > 0:
             start = i + 2
             break
 
@@ -139,9 +139,20 @@ def update_readme():
 
     license = "\n\n## License\n\nCopyright (c) 2020 Lewis Tian. Licensed under the MIT license.\n"
 
+    # 日历样式+列表样式；前者显示时间，后者显示主题
+    with open("SUMMARY.md", encoding="utf-8") as f:
+        lists = f.readlines()[2:]
+    lists[0] = "\n\n## List\n"
+    for i, x in enumerate(lists):
+        if x.startswith("## "):
+            lists[i] = x.replace("## ", "### ")
+        elif x.startswith("### "):
+            lists[i] = x.replace("### ", "#### ")
+
     with open("README.md", "w", encoding="utf-8") as f:
         f.write("".join(lines[: start + 4]))
         f.write(table)
+        f.write("".join(lists))
         f.write(license)
 
 
@@ -202,5 +213,5 @@ def update_summary():
 
 
 if __name__ == "__main__":
-    update_readme()
     update_summary()
+    update_readme()
