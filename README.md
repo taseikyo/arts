@@ -21,12 +21,12 @@ arts 的想法由 [陈浩](https://github.com/haoel) 提出：
 
 ## Calendar
 
-Nice! 7 posts in total. Keep going!
+OK! 8 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
 | [202011W1](weekly/202011W1.md) | [202011W2](weekly/202011W2.md) | [202011W3](weekly/202011W3.md) | [202011W4](weekly/202011W4.md) | [202012W1](weekly/202012W1.md) |
-| [202012W2](weekly/202012W2.md) | [202012W3](weekly/202012W3.md) | | | | |
+| [202012W2](weekly/202012W2.md) | [202012W3](weekly/202012W3.md) | [202012W4](weekly/202012W4.md) | | | |
 
 ## List
 
@@ -34,6 +34,7 @@ Nice! 7 posts in total. Keep going!
 
 #### 十二月
 
+- [第 8 期：停止追求完美 —— 过你想要的生活](weekly/202012W4.md)
 - [第 7 期：我们应该掌握的三门编程语言](weekly/202012W3.md)
 - [第 6 期：你也可以做大事，前提是你有时间](weekly/202012W2.md)
 - [第 5 期：在你感觉准备好之前采取行动](weekly/202012W1.md)
