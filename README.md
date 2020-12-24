@@ -19,6 +19,38 @@ arts 的想法由 [陈浩](https://github.com/haoel) 提出：
 
 四点分别是*解决一道算法题*，*点评一篇英文文章*，*学习一项技术技巧*，*分享一个观点或思考*。这是个每周计划，也许有时候由于某些原因做到不全部，但是能至少完成一项吧，毕竟比如技术技巧还是比较轻松的。
 
+## Offline Reading
+
+除了在线的两种方式（GitHub & GitBook），我闲得无聊又写了个脚本，使得可以离线看，主要就是用 Shell 脚本将这些 Markdown 整合生成一个 epub 文档，然后用 Calibre 转成 mobi 格式，发送到 Kindle 看了下效果，还不错。
+
+为了修改其中的跳转链接（锚点）还看了挺多博客的，结果还是得靠自己发散思维来解决，主要用到了 `pandoc`，`grep`，`cut` 和 `sed`，最后跟我说：`sed` 真牛逼！
+
+食用方法（Linux 环境，或者 Windows 下使用 WSL）：
+
+```Bash
+tian@ubuntu:/mnt/f/GitHub$ git clone https://github.com/taseikyo/arts.git
+tian@ubuntu:/mnt/f/GitHub$ cd arts
+tian@ubuntu:/mnt/f/GitHub/arts$ chmod +x ./epub.sh
+tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
+Generate title.txt
+Generate temporary folder
+Modify the path of images
+Modify the anchor of Weeklys
+Modify the anchor of README.md & Weeklys
+Generate epub file using pandoc
+Remove temporary folder
+Remove title.txt
+Reset README.md
+Updated 1 path from the index
+```
+
+于是一个 "arts.epub" 文档就生成了，可能会报下面错误，用 vim 打开，设置文件格式为 unix 类型（`:set ff=unix`），然后运行。
+
+```Bash
+tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
+./epub.sh: line 6: $'\r': command not found
+```
+
 ## Calendar
 
 OK! 8 posts in total. Keep going!
