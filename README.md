@@ -53,12 +53,12 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 
 ## Calendar
 
-OK! 8 posts in total. Keep going!
+Wow! 9 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
 | [202011W1](weekly/202011W1.md) | [202011W2](weekly/202011W2.md) | [202011W3](weekly/202011W3.md) | [202011W4](weekly/202011W4.md) | [202012W1](weekly/202012W1.md) |
-| [202012W2](weekly/202012W2.md) | [202012W3](weekly/202012W3.md) | [202012W4](weekly/202012W4.md) | | | |
+| [202012W2](weekly/202012W2.md) | [202012W3](weekly/202012W3.md) | [202012W4](weekly/202012W4.md) | [202012W5](weekly/202012W5.md) | | |
 
 ## List
 
@@ -66,6 +66,7 @@ OK! 8 posts in total. Keep going!
 
 #### 十二月
 
+- [第 9 期：选择合适的尺度](weekly/202012W5.md)
 - [第 8 期：停止追求完美 —— 过你想要的生活](weekly/202012W4.md)
 - [第 7 期：我们应该掌握的三门编程语言](weekly/202012W3.md)
 - [第 6 期：你也可以做大事，前提是你有时间](weekly/202012W2.md)
