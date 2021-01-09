@@ -8,6 +8,12 @@
 # 完成了基本所有连接（锚点）的跳转
 # 由于每周的 Weekly 中 ARTS（algorithm、review、tip 和 share）的格式转化导致没有锚点可跳
 
+# 2020/12/30 更新
+# 有趣的是当给 pandoc 加上 -f gfm -t epub 参数时，ARTS 锚点正常跳转
+# 但是会 title.txt 就会失去作用，有下列警告
+# [WARNING] This document format requires a nonempty <title> element.
+# 生成的 epub 电子书的标题、作者、License 确实都没了，title.txt 的内容堆在首页
+
 # 如果 pandoc 没有安装则先安装
 if ! type pandoc >/dev/null 2>&1; then
 	echo "Install pandoc"
