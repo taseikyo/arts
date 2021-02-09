@@ -53,13 +53,13 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 
 ## Calendar
 
-Nice! 14 posts in total. Keep going!
+Amazing! 15 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
 | [202011W1](weekly/202011W1.md) | [202011W2](weekly/202011W2.md) | [202011W3](weekly/202011W3.md) | [202011W4](weekly/202011W4.md) | [202012W1](weekly/202012W1.md) |
 | [202012W2](weekly/202012W2.md) | [202012W3](weekly/202012W3.md) | [202012W4](weekly/202012W4.md) | [202012W5](weekly/202012W5.md) | [202101W1](weekly/202101W1.md) |
-| [202101W2](weekly/202101W2.md) | [202101W3](weekly/202101W3.md) | [202101W4](weekly/202101W4.md) | [202102W1](weekly/202102W1.md) | | |
+| [202101W2](weekly/202101W2.md) | [202101W3](weekly/202101W3.md) | [202101W4](weekly/202101W4.md) | [202102W1](weekly/202102W1.md) | [202102W2](weekly/202102W2.md) |
 
 ## List
 
@@ -67,6 +67,7 @@ Nice! 14 posts in total. Keep going!
 
 #### 二月
 
+- [第 15 期：为何年味越来越淡？](weekly/202102W2.md)
 - [第 14 期：树大必有枯枝，人多必有白痴](weekly/202102W1.md)
 
 #### 一月
