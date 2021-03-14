@@ -1,0 +1,32 @@
+on:
+  push:
+    tags:
+      - "w*"
+
+name: Release asset workflow
+
+jobs:
+  release:
+    name: Release epub
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Get the short tag
+        id: tag
+        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+
+      - name: Create the epub
+        run: bash ./epub.sh
+
+      - name: Create a new release
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        with:
+          name: ${{ steps.tag.outputs.VERSION }}
+          prerelease: false
+          draft: false
+          files: |
+            arts.epub
