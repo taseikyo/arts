@@ -21,6 +21,11 @@ arts 的想法由 [陈浩](https://github.com/haoel) 提出：
 
 ## Offline Reading
 
+Download [arts.epub](https://github.com/taseikyo/arts/releases)
+
+<details>
+<summary>点我 👀</summary>
+
 除了在线的两种方式（GitHub & GitBook），我闲得无聊又写了个脚本，使得可以离线看，主要就是用 Shell 脚本将这些 Markdown 整合生成一个 epub 文档，然后用 Calibre 转成 mobi 格式，发送到 Kindle 看了下效果，还不错。
 
 为了修改其中的跳转链接（锚点）还看了挺多博客的，结果还是得靠自己发散思维来解决，主要用到了 `pandoc`，`grep`，`cut` 和 `sed`，最后跟我说：`sed` 真牛逼！
@@ -50,6 +55,10 @@ Updated 1 path from the index
 tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 ./epub.sh: line 6: $'\r': command not found
 ```
+
+再更新：除了 epub 格式电子书，又用 LaTex 重写了 Makrdown，在 latex/output 文件夹有一份生成的 [pdf](latex/output/arts.pdf)。
+
+</details>
 
 ## Calendar
 

@@ -1,0 +1,167 @@
+\chapter{忘记业余项目，专注于工作}\label{chap:w2}
+
+\noindent \href{https://github.com/taseikyo/arts}{readme} | \hyperref[chap:w1]{previous} | \hyperref[chap:w3]{next}
+
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=\textwidth]{../images/2020/11/vasilios-muselimis-BirCcqcSX5U-unsplash.jpg}
+  \caption{\textit{Photo by Vasilios Muselimis on Unsplash}}
+\end{figure}
+
+\textit{总字数：2225 个（汉字：1175，英文单词：428，数字：34，中文标点：149，英文标点：439），阅读时长约：4 分 27 秒。}
+
+\section{algorithm \hyperref[chap:w2]{top}}\label{w2:algorithm}
+
+\subsection{句子逆序}
+
+将一个英文语句以单词为单位逆序排放。题目很简单，在 \href{https://github.com/TheAlgorithms/Python}{TheAlgorithms/Python} 中有对应的实现，具体见 strings/reverse\_words.py 和 strings/reverse\_letters.py，这俩有细微区别。
+
+\begin{itemize}
+  \item \href{https://github.com/taseikyo/arts/blob/master/code/nowcoder_48b3cb4e3c694d9da5526e6255bb73c3.py}{code/nowcoder\_48b3cb4e3c694d9da5526e6255bb73c3.py}
+\end{itemize}
+
+\begin{lstlisting}[language=Python]
+def reverse_words():
+    return " ".join(input().split()[::-1])
+
+print(reverse_words())
+\end{lstlisting}
+
+\subsection{根据快速排序的思路，找出数组中第 K 大的数}
+
+来自牛客，想吐槽给的函数参数，既然第一个参数是 vector 还要传数组大小干嘛？
+
+\begin{itemize}
+  \item \href{https://github.com/taseikyo/arts/blob/master/code/nowcoder_e016ad9b7f0b45048c58a9f27ba618bf.cpp}{code/nowcoder\_e016ad9b7f0b45048c58a9f27ba618bf.cpp}
+\end{itemize}
+
+\begin{lstlisting}[language=C++]
+class Finder {
+  public:
+	int findKth(vector<int> a, int n, int K) {
+		return findKth(a, 0, n - 1, n - K + 1);
+	}
+	int findKth(vector<int>&a, int l, int r, int K) {
+		if (l == r) return a[l];
+		int i = l - 1, j = r + 1;
+
+		int x = a[l + r >> 1];
+		while (i < j) {
+			do i++; while (a[i] < x);
+			do j--; while (x < a[j]);
+			if (i < j) swap(a[i], a[j]);
+		}
+		int s = j - l + 1;
+		if (K <= s) return findKth(a, l, j, K);
+		else return findKth(a, j + 1, r, K - s);
+	}
+};
+\end{lstlisting}
+
+\section{review \hyperref[chap:w2]{top}}\label{w2:review}
+
+\subsection{\href{https://medium.com/@saginadir/why-i-love-golang-90085898b4f7}{Why I Love Golang（英文）}}
+
+作者介绍了他喜欢 go 的原因，读完你发现原因其实就是 go 的特性，比如 GOPATH 的设计；模块化；包的资源管理（go get github.com/xxx/yyy）；强制语言格式特性（大括号禁止换行）；编译安装的路径（GOPATH/pkg 和 GOPATH/bin）；跨平台编译；并发等等。
+
+最近在开始学习 go，上面的几个特性也慢慢都接触到了，GOPATH 的设计我觉得挺妙的，导入包的时候不用去思考到底它在哪；一些格式特性也很爽，比如不用写分号（习惯 Python 之后再写 C/C++ 老是忘），大括号强制在行尾这正是我想要的，看到大括号换行的代码我强迫症真的忍不了！
+
+另外感觉它跟 C 还挺像的，所以基础语法学起来挺快的。但是学语言都会陷入一种困境，你发现看完它的语法之后，似乎感觉已经学会了，但是好像什么都做不了。所以还是需要学以致用，像之前学 Python，写了很多爬虫之后对它的语法特性有了更深刻的了解，同时也写起来更熟练。目前学 go 可能没有很多时间去搞一些小项目，然而仅仅只是看不做的话很快就会忘记了，但这也是没办法的事。
+
+\section{tip \hyperref[chap:w2]{top}}\label{w2:tip}
+
+\subsection{\href{https://blog.csdn.net/Bob__yuan/article/details/96737222}{std::pair 作为 std::unordered\_map 的 key（中文）}}
+
+unordered\_map 是 C++11 中新加入的容器，底层是用 hash 实现的，对于键值就需要有 hash 函数计算出对应的 hash 值了。
+
+对于 int 和 string 这种基础类型，C++ 提供了计算他们的 hash 值的函数。但是对于 \lstinline{std::pair} 或者 \lstinline{std::vector} 这种就没有，编译器会报错："The C++ Standard doesn't provide a hash for this type."。
+
+下面是 unordered\_map 的定义：
+
+\begin{lstlisting}[language=C++]
+template < class Key,                                    // unordered_map::key_type
+           class T,                                      // unordered_map::mapped_type
+           class Hash = hash<Key>,                       // unordered_map::hasher
+           class Pred = equal_to<Key>,                   // unordered_map::key_equal
+           class Alloc = allocator< pair<const Key, T> > // unordered_map::allocator_type
+           >
+class unordered_map;
+\end{lstlisting}
+
+第一个模板参数是键，第二个模板参数是值，第三个模板参数是 hash 函数，第四个模板参数是相等的比较函数，最后一个是分配器。
+
+我们跳到 hash 这个结构的定义部分，如下代码，对于基础类型，都给出了对应的模板特化，也可以看到上面编译错误的报错位置。
+
+\begin{lstlisting}[language=C++]
+// TEMPLATE STRUCT hash
+template<class _Kty>
+struct hash: public _Bitwise_hash<_Kty> {
+	static constexpr bool _Value = __is_enum(_Kty);
+	static_assert(_Value,
+	              "The C++ Standard doesn't provide a hash for this type.");
+};
+template<>
+struct hash<bool>: public _Bitwise_hash<bool> {
+	// hash functor for bool
+};
+template<>
+struct hash<char>: public _Bitwise_hash<char> {
+	// hash functor for char
+};
+\end{lstlisting}
+
+所以如果对于自定义类型，或者 hash 类没有提供模板特化的数据类型，那就需要自己定义了，最简单的方法就是：
+
+\begin{lstlisting}[language=C++]
+struct pair_hash {
+	template<class T1, class T2>
+	std::size_t operator() (const std::pair<T1, T2>& p) const {
+		auto h1 = std::hash<T1> {}(p.first);
+		auto h2 = std::hash<T2> {}(p.second);
+		return h1 ^ h2;
+	}
+};
+
+int main() {
+	//unordered_map<pair<int, int>, int> error_mmp;			// error
+	unordered_map<pair<int, int>, int, pair_hash> ok_mmp;	// ok
+}
+\end{lstlisting}
+
+\subsection{\href{http://www.ruanyifeng.com/blog/2019/09/getting-started-with-github-actions.html}{GitHub Actions 入门教程（中文）}}
+
+阮一峰老师教你如何使用 GitHub Actions。我看 \href{https://github.com/TheAlgorithms/Python}{TheAlgorithms/Python} 那个项目就使用了 GitHub Actions，之前一直想学老是忘记了。
+
+\subsection{\href{https://ryangjchandler.co.uk/articles/running-github-actions-for-certain-commit-messages}{如何只对某些提交执行 GitHub Actions（英文）}}
+
+\begin{lstlisting}[language=Bash]
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    if: "contains(github.event.head_commit.message, '[build]')"
+\end{lstlisting}
+
+如果有上述配置，任何包含 "[build]" commit 信息的提交都将触发这些作业，其他所有内容将被跳过。
+
+\begin{lstlisting}[language=Bash]
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    if: "! contains(github.event.head_commit.message, 'wip')"
+\end{lstlisting}
+
+如果有上述配置，任何包含 "wip" commit 信息的提交都跳过这些作业。
+
+\section{share \hyperref[chap:w2]{top}}\label{w2:share}
+
+\subsection{\href{https://manuel.darcemont.fr/posts/focus-on-jour-job/}{忘记业余项目，专注于工作（英文）}}
+
+我比较认同作者的观点，增加一些无用的项目对于提升自身并没有多大用处，就拿我来说，即便我现在学习了 Vue，并且仿做了几个热门应用（GitHub 上有很多这种），由于平时并不会使用到 Vue，很快我就会忘记这项技术，还不如做好自身的工作；
+
+但是在日常工作会用到的项目或者技术却不一样，记得在本科时粗浅了解过很多语言，Java（大创要用）、ActionScript（看 B 站一个游戏视频入坑想自己做一个）、HTML+CSS+JavaScript（当时写博客的冲动）、Bash Shell（使用 Linux）、Python（写爬虫玩）和 C++（自己的工作）等等，现在回头来看，前面提到的一些语言的学习都可以说是浪费时间，当时花了很多时间和精力去学习它们，现在还是都忘了，如果当初花多点时间去干点别的，比如 BY 的选择上，或许现在会很不一样。
+
+不过有一说一，Python 我觉得是当初学习语言最对的一个，现在基本每天都会使用，无论是对于日常一些琐碎事情的自动化，还是对于自己的手头工作的黏合，都有很大帮助。
+
+谢谢你当初选择和学习了 Python，谢谢你一路都坚持了下来。
+
+\noindent \href{https://github.com/taseikyo/arts}{readme} | \hyperref[chap:w1]{previous} | \hyperref[chap:w3]{next}
