@@ -1,0 +1,295 @@
+\chapter{自由并不简单}\label{chap:w3}
+
+\noindent \href{https://github.com/taseikyo/arts}{readme} | \hyperref[chap:w2]{previous} | \hyperref[chap:w4]{next}
+
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=\textwidth]{../images/2020/11/2020-11-15-RCEP.jpg}
+  \caption{\textit{Photo by unknown on 中国政府网}}
+\end{figure}
+
+\textit{总字数：2869 个（汉字：1508，英文单词：531，数字：47，中文标点：195，英文标点：588），阅读时长约：5 分 44 秒。}
+
+\section{algorithm \hyperref[chap:w3]{top}}\label{w3:algorithm}
+
+\subsection{\href{https://leetcode-cn.com/problems/sort-array-by-parity-ii/}{922.按奇偶排序数组 II}}
+
+20/11/12 的每日一题，对数组进行排序，以便当 A[i] 为奇数时，i 也是奇数；当 A[i] 为偶数时，i 也是偶数。
+
+题目不难，首先建一个跟原数组同样大的数组，用两个变量标记当前奇偶的下标，遍历原数组，依次将数据填入返回数组中。本来是用 C++ 实现的，然后又用 Go 实现了一遍，区别并不大，只不过有些语法不太熟，需要查一下才知道怎么用。
+
+\begin{itemize}
+  \item \href{https://github.com/taseikyo/arts/blob/master/code/leetcode_0922.go}{code/leetcode\_0922.go}
+\end{itemize}
+
+\begin{lstlisting}[language=go]
+func sortArrayByParityII(A []int) []int {
+	ret := make([]int, len(A))
+	even_idx, odd_idx := 0, 1
+	for _, x := range(A)  {
+		if x % 2 == 0 {
+			ret[even_idx] = x
+			even_idx += 2
+		} else {
+			ret[odd_idx] = x
+			odd_idx += 2
+		}
+	}
+	return ret
+}
+\end{lstlisting}
+
+\subsection{\href{https://leetcode-cn.com/problems/remove-k-digits/}{402.移掉 K 位数字}}
+
+是一道 medium 的题，不知道咋优化，看了下题解拨云见日，茅塞顿开（老吕布了）。
+
+思路：从左往右遍历原字符串，我们保留每个遍历到的字符（X），但是我们可以选择保留还是舍弃前一个字符（Y），关键看 X 和 Y 的大小，如果 Y > X，显然，舍弃 Y 得到的数会更小，否则保留 Y。如果遍历过程中就删除了 K 个字符，那么遍历结束；如果遍历结束还没删够 K 个，那么删除最后的若干字符。
+
+\begin{itemize}
+  \item \href{https://github.com/taseikyo/arts/blob/master/code/leetcode_0402.go}{code/leetcode\_0402.go}
+\end{itemize}
+
+\begin{lstlisting}[language=Go]
+func removeKdigits(num string, k int) string {
+	stack := []byte{}
+	for i := range num {
+		digit := num[i]
+		for k > 0 && len(stack) > 0 && digit < stack[len(stack)-1] {
+			stack = stack[:len(stack)-1]
+			k--
+		}
+		stack = append(stack, digit)
+	}
+	stack = stack[:len(stack)-k]
+	ans := strings.TrimLeft(string(stack), "0")
+	if ans == "" {
+		ans = "0"
+	}
+	return ans
+}
+\end{lstlisting}
+
+\section{review \hyperref[chap:w3]{top}}\label{w3:review}
+
+\subsection{\href{https://www.allthingsdistributed.com/2020/01/aws-datalake.html}{亚马逊银河数据湖（英文）}}
+
+这篇文章介绍了亚马逊为了解决他们关于大数据的问题而整出的一个名叫银河数据湖（Galaxy data lake）的东西。
+
+看完之后我感觉它是一个大型集中式非关系型数据库，提供了导入、访问、管理等功能。像亚马逊这种大公司都存在类似的问题，在全球分布着若干数据中心，每个地方的数据以不同的格式存储，以不同的方式管理，若想访问多个数据中心的数据得获得相应的凭证（授权），所以五花八门无法统一管理，还存在安全隐患。因此亚马逊提出数据湖的想法，建立一个集中式数据库，将所有不同格式的数据存到数据湖中，对外提供统一的访问和管理接口，既方便管理也更安全，同时大量的数据也为机器学习和人工智能提供了海量的训练集，这就为亚马逊将来的成本、服务都能提供很好的决策。
+
+在建立数据湖过程中也利用了一些现有的组件，它是构建在 Amazon S3 之上的，使用了 \href{https://aws.amazon.com/glue}{AWS Glue}、\href{https://aws.amazon.com/dms}{AWS DMS}、\href{https://aws.amazon.com/dynamodb/?nc2=h_ql_prod_db_ddb}{Amazon DynamoDB}、\href{https://aws.amazon.com/elasticsearch-service}{Amazon ES} 以及 \href{https://aws.amazon.com/athena}{Amazon Athena} 和 \href{https://aws.amazon.com/sagemaker}{Amazon SageMaker} 等组件，他们分别提供了 ETL、迁移、存储、查询等功能。
+
+数据库真是个有趣的东西，可能以后工作了跟它打交道的次数会更多，那时体会可能更深刻。但是不得不说它确实是 CS 最重要的课程之一，然而在学校（华科，没错我说的就是你）的学习体验贼差。
+
+\section{tip \hyperref[chap:w3]{top}}\label{w3:tip}
+
+\subsection{\href{https://blog.csdn.net/m0_37822685/article/details/80259402}{Python 异常处理之 try/except/else/finally（中文）}}
+
+之前都是无脑 \lstinline{try...except...}，今天来看看其他的用法。
+
+\begin{enumerate}
+\item try - except
+
+\begin{lstlisting}[language=Python]
+try:
+	print("Before error")
+	a = b
+	print(a)
+	print("After error")
+except:
+	print("Error")
+
+print("Continue!")
+
+# Before error
+# Error
+# Continue!
+\end{lstlisting}
+
+所以流程如下：
+
+\begin{itemize}
+\item 先执行 try block，直到发现了错误，不再执行异常之后的代码
+\item 执行 except block
+\item 向下继续
+\end{itemize}
+
+对于多个 except，则会依次匹配错误，如果没有匹配到程序会报错，所以可以最后加一个通用匹配。像下面如果没有最后一个 except 程序会报错：
+
+\begin{lstlisting}[language=Python]
+try:
+	a = b
+	print(a)
+except SyntaxError:
+	print("<<<< SyntaxError")
+except SystemExit:
+	print("<<<< NameError")
+except:
+	print("I don't know, but error.")
+
+print("He, try/except is so difficult!")
+
+# I don't know, but error.
+# He, try/except is so difficult!
+\end{lstlisting}
+
+\item try - except - else
+
+\begin{lstlisting}[language=Python]
+try:
+	a = b
+	print(a)
+except SyntaxError:
+	print("<<<< SyntaxError")
+except SystemExit:
+	print("<<<< NameError")
+except:
+	print("I don't know, but error.")
+else:
+	print("That's good, no error.")
+
+print("He, try/except is so difficult!")
+
+# I don't know, but error.
+# He, try/except is so difficult!
+\end{lstlisting}
+
+可见，有异常时，else block 时不执行的。
+
+\begin{lstlisting}[language=Python]
+try:
+	b = 1
+	a = b
+	print(a)
+except SyntaxError:
+	print("<<<< SyntaxError")
+except SystemExit:
+	print("<<<< NameError")
+except:
+	print("I don't know, but error.")
+else:
+	print("That's good, no error.")
+
+print("He, try/except is so difficult!")
+
+# 1
+# That's good, no error.
+# He, try/except is so difficult!
+\end{lstlisting}
+
+可见，无异常时 else block 执行。
+
+\item try - finally
+
+无论 try 语句是否有异常，最后都要执行的代码。
+
+\begin{lstlisting}[language=Python]
+try:
+	b = 1
+	a = b
+	print(a)
+except SyntaxError:
+	print("<<<< SyntaxError")
+except SystemExit:
+	print("<<<< NameError")
+except:
+	print("I don't know, but error.")
+else:
+	print("That's good, no error.")
+finally:
+	print("I will be here!")
+
+print("He, try/except is so difficult!")
+
+# 1
+# That's good, no error.
+# I will be here!
+# He, try/except is so difficult!
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python]
+try:
+	a = b
+	print(a)
+except SyntaxError:
+	print("<<<< SyntaxError")
+except SystemExit:
+	print("<<<< NameError")
+except:
+	print("I don't know, but error.")
+else:
+	print("That's good, no error.")
+finally:
+	print("I will be here!")
+
+print("He, try/except is so difficult!")
+
+# I don't know, but error.
+# I will be here!
+# He, try/except is so difficult!
+\end{lstlisting}
+\end{enumerate}
+
+\subsection{\href{https://stackoverflow.com/a/26109157/7669794}{Python \lstinline{yield from}（StackOverflow）}}
+
+很棒的一个回答，详细地介绍了 \lstinline{yield from} 的作用，如果只是简单使用，可以把他当作是对于迭代器的展开（\lstinline{yield from iterator} == \lstinline{for v in iterator: yield v}），但是它不仅仅如此，它在调用者与子生成器之间构建了一个透明的双向联系（\textit{establishes a transparent bidirectional connection between the caller and the sub-generator}），只不过这个关键词字面意思并没有表现出来罢了。
+
+另外使用 \lstinline{yield from} 可以从生成器中读取/向生成器发送数据（双向），而且它自动完成了异常向子生成器的传递。
+
+\begin{lstlisting}[language=Python]
+class SpamException(Exception):
+    pass
+
+def writer():
+    while True:
+        try:
+            w = (yield)
+        except SpamException:
+            print('***')
+        else:
+            print('>> ', w)
+
+def writer_wrapper(coro):
+    yield from coro
+
+w = writer()
+wrap = writer_wrapper(w)
+wrap.send(None)  # "prime" the coroutine
+for i in [0, 1, 2, 'spam', 4]:
+    if i == 'spam':
+        wrap.throw(SpamException)
+    else:
+        wrap.send(i)
+
+# >>  0
+# >>  1
+# >>  2
+# ***
+# >>  4
+\end{lstlisting}
+
+建议去看原回答，写得很详细。
+
+\subsection{\href{https://zhuanlan.zhihu.com/p/27258289}{Python async/await 入门指南（中文）}}
+
+看懂了前半部分，后面就看不懂了 @-@，异步编程还是太复杂了，可能写一些简单的东西会很简单，一旦涉及更深的东西就很复杂了。
+
+\section{share \hyperref[chap:w3]{top}}\label{w3:share}
+
+\subsection{\href{https://www.arp242.net/freedom.html}{自由并不简单（英文）}}
+
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=\textwidth]{../images/2020/11/嫌われ松子の一生.jpg}
+  \caption{\textit{\href{https://movie.douban.com/subject/1787291/}{《被嫌弃的松子的一生》} 电影截图}}
+\end{figure}
+
+作者观点很有趣，他认为自由并不是一维的，并不能简单地对其进行评分说你的自由是增加了还是减少了。因为人是群居动物，身处一个群体中就会受到其他人的影响，比如，邻居凌晨 4 点播放音乐的自由肯定会影响你睡觉的自由，这种情况下，你觉得自由是增加了还是减少了？自由是一个多维的，增加一个人/群体的自由往往会减少其他人的自由。
+
+很显然，自由是不简单的，每个人都能清醒地意识到。尽管我的格言是【唯自由与美食不可负】，但也只是美好的愿景罢了，从出生就背负了各种责任怎么可能自由。小时候，你常听到的或许是【好好学习，少跟别人出去玩，你看那个 X，又考了 yy 分，你再看看你...】；再大一点，你会听到【你看那个 X，他妈说他要去 xx 高中，以后要去 yy 大学，你看看你，不好好努力，总搞些与学业无关的东西，以后只能去普通 zz 高中，读个水 vv 大学...】；再后来啊，或许会被家里人所有人催着找男/女朋友，催着结婚生子，如此而已，没什么好说的。
+
+生活中往往受到各种限制，无论是来自家庭还是旁人还是社会，或许某一天你财富自由了，那个时候你就能追求更广阔的自由了吧。
+
+生而为人，我很抱歉。
+
+\noindent \href{https://github.com/taseikyo/arts}{readme} | \hyperref[chap:w2]{previous} | \hyperref[chap:w4]{next}
