@@ -56,6 +56,8 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 ./epub.sh: line 6: $'\r': command not found
 ```
 
+再更新：除了 epub 格式电子书，又用 LaTex 重写了 Makrdown，在 latex/output 文件夹有一份生成的 [pdf](latex/output/arts.pdf)。
+
 </details>
 
 ## Calendar
