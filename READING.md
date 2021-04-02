@@ -12,6 +12,8 @@
 
 ## 文学
 
+1. 被讨厌的勇气，by 岸见一郎，2021 年 4 月
+1. 雪中悍刀行，by 烽火戏诸侯，2020 年 2 月
 1. :+1: 阿 Q 正传，by 鲁迅，2018 年 11 月
 1. 我们仨，by 杨绛，2018 年 11 月
 1. 一个人的好天气，by 青山七惠，2018 年 3 月
@@ -23,6 +25,7 @@
 1. :+1: 文化苦旅，by 余秋雨，2013 年
 1. :+1: 山居笔记，by 余秋雨，2013 年
 1. :+1: 人间词话，by 王国维，2012 年
+1. 于丹《论语》心得，by 于丹，2012 年
 1. :+1: 水浒传，by 施耐庵，2010 年
 1. :+1: 骆驼祥子，by 老舍，2009 年
 
@@ -38,6 +41,7 @@
 1. :+1::+1: 史记，by 司马迁，2020 年 2 月
 1. 正说大明十六帝，by 刘亚玲，2018 年 10 月
 1. 正说大宋十八帝，by 刘亚玲，2018 年 9 月
+1. 德川家康（第四部），by 山冈庄八，2018 年 2 月
 1. :+1: 太平天国，by 史景迁，2016 年 9 月
 1. 大宋王朝（前四册），by 何辉，2016 年 6 月
 1. 彪悍南北朝之铁血后三国，by 云淡心远，2015 年 3 月
@@ -45,13 +49,21 @@
 
 ## 技术
 
+1. 剑指 Offer，by 何海涛，2020 年  9 月
+1. :+1: 深入理解计算机系统（第七至十章），3rd，by Randal E.Bryant（龚奕利 译），2020 年  9 月
+1. :+1: 流畅的 Python（至第六章），by Luciano Ramalho（安道 译），2020 年  9 月
+1. :+1::+1: 程序员的自我修养（至第七章），by 俞甲子，2020 年 8 月
 1. :x: Python One-Liners，by Christian Mayer，2020 年 6 月
+1. :+1: C++ Primer（至第十七章），by Stanley B. Lippman（王刚 译），2020 年 6 月
+1. Linux 系统编程，2nd，by Robert Love，2019 年 11 月
+1. 深入理解 LINUX 内核（内存和进程部分章节），3rd，by Daniel P. Bovet（陈莉君 译），2019 年 11 月
 1. KVM实战：原理、进阶与性能调优，by 任永杰，2019 年 6 月
-1. Web Scraping with Python（2nd Edition），by Ryan Mitchell，2018 年 12 月
+1. Web Scraping with Python，2nd，by Ryan Mitchell，2018 年 12 月
 1. chrome 扩展及应用开发，by Sneezry，2018 年 10 月
 1. Electron in Action，by Steve Kinney，2018 年 10 月
 1. :x: Learn Python 3 the Hard Way，by Zed A. Shaw，2018 年 9 月
 1. Web Scraping with Python，by Ryan Mitchell，2017 年 7 月
+1. ActionScript 3.0 从入门到精通，by 翟宝利，2015 年 10 月
 
 ## 杂项
 
