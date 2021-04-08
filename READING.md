@@ -49,6 +49,7 @@
 
 ## 技术
 
+1. [Essential C](http://cslibrary.stanford.edu/101)，by Nick Parlante，2021 年 4 月
 1. 剑指 Offer，by 何海涛，2020 年  9 月
 1. :+1: 深入理解计算机系统（第七至十章），3rd，by Randal E.Bryant（龚奕利 译），2020 年  9 月
 1. :+1: 流畅的 Python（至第六章），by Luciano Ramalho（安道 译），2020 年  9 月

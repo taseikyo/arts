@@ -35,13 +35,13 @@ TEMPLATE = """
 - [tip](#tip-)
 - [share](#share-)
 
-## algorithm [⬆](#weekly-{current_id})
+## algorithm [🔝](#weekly-{current_id})
 
-## review [⬆](#weekly-{current_id})
+## review [🔝](#weekly-{current_id})
 
-## tip [⬆](#weekly-{current_id})
+## tip [🔝](#weekly-{current_id})
 
-## share [⬆](#weekly-{current_id})
+## share [🔝](#weekly-{current_id})
 
 [readme](../README.md) | [previous]({previous_post}) | [next]({next_post})
 """

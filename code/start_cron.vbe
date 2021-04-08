@@ -1,0 +1,2 @@
+Set ws = CreateObject("Wscript.Shell") 
+ws.run "wsl -d Ubuntu-20.04 -u root /home/tian/start_cron.sh", vbhide
