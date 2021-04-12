@@ -18,9 +18,7 @@ jobs:
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
 
       - name: Create the epub
-        uses: xu-cheng/texlive-action/small@v1
-        with:  
-          run: bash ./epub.sh
+        run: bash ./epub.sh
 
       - name: Create a new release
         uses: softprops/action-gh-release@v1

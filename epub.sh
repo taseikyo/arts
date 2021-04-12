@@ -20,6 +20,11 @@ if ! type pandoc >/dev/null 2>&1; then
 	sudo apt install pandoc -y
 fi
 
+if ! type xelatex >/dev/null 2>&1; then
+	echo "Install latex"
+	sudo apt install texlive-full -y
+fi
+
 echo "Generate title.txt"
 echo -e "---\ntitle: \"arts: algorithm, review, tip and share\"\n\
 author: 九卿（Lewis Tian）\nlanguage: zh-CN\nrights: MIT License\nindent: true\nlinestretch: 1.25\n\
@@ -75,10 +80,10 @@ do
 done
 
 echo "Generate epub file using pandoc"
-# pandoc -o arts.epub title.txt README.md build/*.md --epub-cover-image=images/header.png
+pandoc -o arts.epub title.txt README.md build/*.md --epub-cover-image=images/header.png
 
-echo "Generate pdf file using pandoc"
-# 替换时间
+# 替换添加 pdf 模板的 mate 信息
+echo "Add meta data"
 metafile=code/meta.txt
 curtime=$(date "+%Y-%m-%d")
 newstr="date: \"${curtime}\""
@@ -86,9 +91,28 @@ line=$(grep -n "date" $metafile | head -n 1 | cut -d":"  -f1)
 sed -n "${line}p" $metafile
 sed -i "${line}d" $metafile
 sed -i "$((line-1))a $newstr" $metafile > /dev/null
-# 将 meta 信息添加到 README 种
+# 将 meta 信息添加到 README 中
 cat $metafile README.md > README.tmp.md
 mv README.tmp.md README.md
+
+# 安装楷体
+echo "Install font (KaiTi)"
+tar xf code/simkai.tar.gz
+sudo cp simkai.ttf /usr/share/fonts/
+sudo mkfontscale
+sudo mkfontdir
+sudo fc-cache
+# if [ $(fc-list :lang=zh | grep kai | wc -l) -eq 0 ]; then
+# 	echo "Install font (KaiTi)"
+# 	tar xf code/simkai.tar.gz
+# 	sudo cp simkai.ttf /usr/share/fonts/
+# 	sudo mkfontscale
+# 	sudo mkfontdir
+# 	sudo fc-cache
+# fi
+
+echo "Generate pdf file using pandoc"
+# 利用 eisvogel 模板（Wandmalfarbe/pandoc-latex-template）直接生成 PDF 
 pandoc README.md build/*.md -o arts.pdf --from markdown --template code/eisvogel --listings --pdf-engine=xelatex -V CJKmainfont="KaiTi"
 
 if [ -d "build" ]; then

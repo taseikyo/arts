@@ -1,7 +1,10 @@
 ---
 title: "arts: algorithm, review, tip and share"
+subtitle: "向世界分享你的作品：算法题解、文章点评、技巧和思想"
 author: [九卿（Lewis Tian）]
 keywords: [arts, algorithm, review, tip, share]
 date: "2021-04-12"
+titlepage: true
+page-background: "images/background.jpg"
 ...
 
