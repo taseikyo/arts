@@ -75,7 +75,21 @@ do
 done
 
 echo "Generate epub file using pandoc"
-pandoc -o arts.epub title.txt README.md build/*.md --epub-cover-image=images/header.png
+# pandoc -o arts.epub title.txt README.md build/*.md --epub-cover-image=images/header.png
+
+echo "Generate pdf file using pandoc"
+# 替换时间
+metafile=code/meta.txt
+curtime=$(date "+%Y-%m-%d")
+newstr="date: \"${curtime}\""
+line=$(grep -n "date" $metafile | head -n 1 | cut -d":"  -f1)
+sed -n "${line}p" $metafile
+sed -i "${line}d" $metafile
+sed -i "$((line-1))a $newstr" $metafile > /dev/null
+# 将 meta 信息添加到 README 种
+cat $metafile README.md > README.tmp.md
+mv README.tmp.md README.md
+pandoc README.md build/*.md -o arts.pdf --from markdown --template code/eisvogel --listings --pdf-engine=xelatex -V CJKmainfont="KaiTi"
 
 if [ -d "build" ]; then
 	echo "Remove temporary folder"
