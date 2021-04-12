@@ -62,7 +62,7 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 
 ## Calendar
 
-Nice! 23 posts in total. Keep going!
+Amazing! 24 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
@@ -70,7 +70,7 @@ Nice! 23 posts in total. Keep going!
 | [202012W2](weekly/202012W2.md) | [202012W3](weekly/202012W3.md) | [202012W4](weekly/202012W4.md) | [202012W5](weekly/202012W5.md) | [202101W1](weekly/202101W1.md) |
 | [202101W2](weekly/202101W2.md) | [202101W3](weekly/202101W3.md) | [202101W4](weekly/202101W4.md) | [202102W1](weekly/202102W1.md) | [202102W2](weekly/202102W2.md) |
 | [202102W3](weekly/202102W3.md) | [202102W4](weekly/202102W4.md) | [202103W1](weekly/202103W1.md) | [202103W2](weekly/202103W2.md) | [202103W3](weekly/202103W3.md) |
-| [202103W4](weekly/202103W4.md) | [202103W5](weekly/202103W5.md) | [202104W1](weekly/202104W1.md) | | | |
+| [202103W4](weekly/202103W4.md) | [202103W5](weekly/202103W5.md) | [202104W1](weekly/202104W1.md) | [202104W2](weekly/202104W2.md) | | |
 
 ## List
 
@@ -78,6 +78,7 @@ Nice! 23 posts in total. Keep going!
 
 #### 四月
 
+- [第 24 期：真正浪费时间和金钱的方式](weekly/202104W2.md)
 - [第 23 期：一辈子单身的话怎么样？](weekly/202104W1.md)
 
 #### 三月
