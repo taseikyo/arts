@@ -24,7 +24,7 @@ arts 的想法由 [陈浩](https://github.com/haoel) 提出：
 Download [arts.epub](https://github.com/taseikyo/arts/releases)
 
 <details>
-<summary>点我 👀</summary>
+<summary></summary>
 
 除了在线的两种方式（GitHub & GitBook），我闲得无聊又写了个脚本，使得可以离线看，主要就是用 Shell 脚本将这些 Markdown 整合生成一个 epub 文档，然后用 Calibre 转成 mobi 格式，发送到 Kindle 看了下效果，还不错。
 
@@ -57,6 +57,8 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 ```
 
 再更新：除了 epub 格式电子书，又用 LaTex 重写了 Makrdown，在 latex/output 文件夹有一份生成的 [pdf](latex/output/arts.pdf)。
+
+再再更新：直接利用 eisvogel 模板（Wandmalfarbe/pandoc-latex-template）直接生成 PDF，集成到 epub.sh 中，由于需要指定中文字体（楷体）又得在 GitHub Action 中，所以花了不少功夫，好在最后搞定了，这下每次 push 新 tag 时，会自动 release 两种电子书。
 
 </details>
 
