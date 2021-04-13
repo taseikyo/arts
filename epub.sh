@@ -120,7 +120,7 @@ done
 
 echo "Generate pdf file using pandoc"
 # 利用 eisvogel 模板（Wandmalfarbe/pandoc-latex-template）直接生成 PDF 
-pandoc README.md build/*.md -o arts.pdf --from markdown --template code/eisvogel --listings --pdf-engine=xelatex -V CJKmainfont="KaiTi"
+pandoc README.md build/*.md -o arts.pdf --from markdown --template code/eisvogel --listings --pdf-engine=xelatex -V CJKmainfont="KaiTi" -V colorlinks -V urlcolor=NavyBlue
 
 if [ -d "build" ]; then
 	echo "Remove temporary folder"
