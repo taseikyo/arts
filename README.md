@@ -4,9 +4,7 @@
 >
 > @Link    : github.com/taseikyo
 
-<p align="center">
-	<a href="#calendar"><img src="images/header.png" alt="ARTS" title="ARTS"></a>
-</p>
+[![](images/header.png "ARTS")](#calendar)
 
 建建删删，一个强迫症的自我修养，真是有毒，希望这是最后一次。
 

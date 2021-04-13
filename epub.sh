@@ -91,6 +91,11 @@ line=$(grep -n "date" $metafile | head -n 1 | cut -d":"  -f1)
 sed -n "${line}p" $metafile
 sed -i "${line}d" $metafile
 sed -i "$((line-1))a $newstr" $metafile > /dev/null
+
+# 添加标题信息，由于添加了目录所以另起一页
+echo "\\pagebreak" >> $metafile
+echo "# ARTS: Algorithm, Review, Tip and Share"  >> $metafile
+
 # 将 meta 信息添加到 README 中
 cat $metafile README.md > README.tmp.md
 mv README.tmp.md README.md
@@ -118,9 +123,26 @@ do
     echo "\\pagebreak" >> $file
 done
 
+# 替换每篇 weekly 中 algorithm review tip share 的跳转
+num=0
+for file in `grep -rl "readme" ./build`; do
+	if [[ num -eq 0 ]]; then
+		anchor=""
+	else
+		anchor="-${num}"
+	fi
+	sed -i "s/#algorithm-/#algorithm${anchor}/g" $file
+	sed -i "s/#review-/#review${anchor}/g" $file
+	sed -i "s/#tip-/#tip${anchor}/g" $file
+	sed -i "s/#share-/#share${anchor}/g" $file
+	((num++))
+done
+# 替换每篇 weekly 中 readme 的跳转
+sed -i "s/#calendar/#arts-algorithm-review-tip-and-share/g" `grep -rl "readme" ./build`
+
 echo "Generate pdf file using pandoc"
 # 利用 eisvogel 模板（Wandmalfarbe/pandoc-latex-template）直接生成 PDF 
-pandoc README.md build/*.md -o arts.pdf --from markdown --template code/eisvogel --listings --pdf-engine=xelatex -V CJKmainfont="KaiTi" -V colorlinks -V urlcolor=NavyBlue
+pandoc README.md build/*.md -o arts.pdf --from markdown --template code/eisvogel --listings --pdf-engine=xelatex -V CJKmainfont="KaiTi" -V colorlinks -V urlcolor=NavyBlue --toc
 
 if [ -d "build" ]; then
 	echo "Remove temporary folder"
@@ -134,3 +156,4 @@ fi
 
 echo "Reset README.md"
 git checkout README.md
+git checkout code/meta.txt
