@@ -125,7 +125,7 @@ done
 
 # 替换每篇 weekly 中 algorithm review tip share 的跳转
 num=0
-for file in `grep -rl "readme" ./build`; do
+for file in `ls build/*`; do
 	if [[ num -eq 0 ]]; then
 		anchor=""
 	else
