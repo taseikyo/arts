@@ -78,6 +78,20 @@ do
 	sed -i "s|${raw_weekly}|${new_weekly}|g" `grep -rl $raw_weekly ./build`
 	((num++))
 done
+# 替换每篇 weekly 中 algorithm review tip share 的跳转
+num=0
+for file in `ls build/*`; do
+    if [[ num -eq 0 ]]; then
+        anchor=""
+    else
+        anchor="-${num}"
+    fi
+    sed -i "s/#algorithm-/#algorithm${anchor}/g" $file
+    sed -i "s/#review-/#review${anchor}/g" $file
+    sed -i "s/#tip-/#tip${anchor}/g" $file
+    sed -i "s/#share-/#share${anchor}/g" $file
+    ((num++))
+done
 
 echo "Generate epub file using pandoc"
 pandoc -o arts.epub title.txt README.md build/*.md --epub-cover-image=images/header.png
@@ -123,25 +137,11 @@ do
     echo "\\pagebreak" >> $file
 done
 
-# 替换每篇 weekly 中 algorithm review tip share 的跳转
-num=0
-for file in `ls build/*`; do
-	if [[ num -eq 0 ]]; then
-		anchor=""
-	else
-		anchor="-${num}"
-	fi
-	sed -i "s/#algorithm-/#algorithm${anchor}/g" $file
-	sed -i "s/#review-/#review${anchor}/g" $file
-	sed -i "s/#tip-/#tip${anchor}/g" $file
-	sed -i "s/#share-/#share${anchor}/g" $file
-	((num++))
-done
 # 替换每篇 weekly 中 readme 的跳转
 sed -i "s/#calendar/#arts-algorithm-review-tip-and-share/g" `grep -rl "readme" ./build`
 
 echo "Generate pdf file using pandoc"
-# 利用 eisvogel 模板（Wandmalfarbe/pandoc-latex-template）直接生成 PDF 
+# 利用 eisvogel 模板（Wandmalfarbe/pandoc-latex-template）直接生成 PDF
 pandoc README.md build/*.md -o arts.pdf --from markdown --template code/eisvogel --listings --pdf-engine=xelatex -V CJKmainfont="KaiTi" -V colorlinks -V urlcolor=NavyBlue --toc
 
 if [ -d "build" ]; then
