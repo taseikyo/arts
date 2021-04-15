@@ -80,6 +80,7 @@ do
 done
 # 替换每篇 weekly 中 algorithm review tip share 的跳转
 num=0
+# back2top='$^{top}$'
 for file in `ls build/*`; do
     if [[ num -eq 0 ]]; then
         anchor=""
@@ -90,6 +91,13 @@ for file in `ls build/*`; do
     sed -i "s/#review-/#review${anchor}/g" $file
     sed -i "s/#tip-/#tip${anchor}/g" $file
     sed -i "s/#share-/#share${anchor}/g" $file
+    # 将返回 README 的 emoji 修改为 top
+    # sed -i "s/#algorithm-/#algorithm-top${anchor}/g" $file
+    # sed -i "s/#review-/#review-top${anchor}/g" $file
+    # sed -i "s/#tip-/#tip-top${anchor}/g" $file
+    # sed -i "s/#share-/#share-top${anchor}/g" $file
+    # sed -i "s/⬆/${back2top}/g" $file
+    # sed -i "s/🔝/${back2top}/g" $file
     ((num++))
 done
 
