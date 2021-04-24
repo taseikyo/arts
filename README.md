@@ -62,7 +62,7 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 
 ## Calendar
 
-Well done! 25 posts in total. Keep going!
+Amazing! 26 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
@@ -71,6 +71,7 @@ Well done! 25 posts in total. Keep going!
 | [202101W2](weekly/202101W2.md) | [202101W3](weekly/202101W3.md) | [202101W4](weekly/202101W4.md) | [202102W1](weekly/202102W1.md) | [202102W2](weekly/202102W2.md) |
 | [202102W3](weekly/202102W3.md) | [202102W4](weekly/202102W4.md) | [202103W1](weekly/202103W1.md) | [202103W2](weekly/202103W2.md) | [202103W3](weekly/202103W3.md) |
 | [202103W4](weekly/202103W4.md) | [202103W5](weekly/202103W5.md) | [202104W1](weekly/202104W1.md) | [202104W2](weekly/202104W2.md) | [202104W3](weekly/202104W3.md) |
+| [202104W4](weekly/202104W4.md) | | | | | |
 
 ## List
 
@@ -78,6 +79,7 @@ Well done! 25 posts in total. Keep going!
 
 #### 四月
 
+- [第 26 期：任何人答应你的事都不算数，只有你自己能做主的事才算数。](weekly/202104W4.md)
 - [第 25 期：没有消息就是消息](weekly/202104W3.md)
 - [第 24 期：真正浪费时间和金钱的方式](weekly/202104W2.md)
 - [第 23 期：一辈子单身的话怎么样？](weekly/202104W1.md)
