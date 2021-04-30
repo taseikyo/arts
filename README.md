@@ -19,7 +19,7 @@ arts 的想法由 [陈浩](https://github.com/haoel) 提出：
 
 ## Offline Reading
 
-Download [arts.epub](https://github.com/taseikyo/arts/releases)
+Download [arts.epub/arts.pdf](https://github.com/taseikyo/arts/releases)
 
 <details>
 <summary></summary>
@@ -54,9 +54,9 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 ./epub.sh: line 6: $'\r': command not found
 ```
 
-再更新：除了 epub 格式电子书，又用 LaTex 重写了 Makrdown，在 latex/output 文件夹有一份生成的 [pdf](latex/output/arts.pdf)。
+再更新：除了 epub 格式电子书，又用 LaTex 重写了 Makrdown，在 latex/output 文件夹有一份生成的 [pdf](https://github.com/taseikyo/arts/tree/master/latex/output/latex/output/arts.pdf)。
 
-再再更新：直接利用 eisvogel 模板（Wandmalfarbe/pandoc-latex-template）直接生成 PDF，集成到 epub.sh 中，由于需要指定中文字体（楷体）又得在 GitHub Action 中，所以花了不少功夫，好在最后搞定了，这下每次 push 新 tag 时，会自动 release 两种电子书。
+再再更新：直接利用 [eisvogel 模板](https://github.com/Wandmalfarbe/pandoc-latex-template) 直接生成 PDF，集成到 epub.sh 中，由于需要指定中文字体（楷体）又得在 GitHub Action 中，所以花了不少功夫，好在最后搞定了，这下每次 push 新 tag 时，会自动 release 两种电子书。
 
 </details>
 
