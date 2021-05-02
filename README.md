@@ -54,7 +54,7 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 ./epub.sh: line 6: $'\r': command not found
 ```
 
-再更新：除了 epub 格式电子书，又用 LaTex 重写了 Makrdown，在 latex/output 文件夹有一份生成的 [pdf](https://github.com/taseikyo/arts/tree/master/latex/output/latex/output/arts.pdf)。
+~~再更新：除了 epub 格式电子书，又用 LaTex 重写了 Makrdown，在 latex/output 文件夹有一份生成的 [pdf](https://github.com/taseikyo/arts/blob/master/latex/output/arts.pdf)。~~（已经将 latex 文件夹删除，内容压缩为 code/manual-latex.7z）
 
 再再更新：直接利用 [eisvogel 模板](https://github.com/Wandmalfarbe/pandoc-latex-template) 直接生成 PDF，集成到 epub.sh 中，由于需要指定中文字体（楷体）又得在 GitHub Action 中，所以花了不少功夫，好在最后搞定了，这下每次 push 新 tag 时，会自动 release 两种电子书。
 
