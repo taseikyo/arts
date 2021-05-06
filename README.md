@@ -62,7 +62,7 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 
 ## Calendar
 
-OK! 27 posts in total. Keep going!
+Outstanding! 28 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
@@ -71,7 +71,7 @@ OK! 27 posts in total. Keep going!
 | [202101W2](weekly/202101W2.md) | [202101W3](weekly/202101W3.md) | [202101W4](weekly/202101W4.md) | [202102W1](weekly/202102W1.md) | [202102W2](weekly/202102W2.md) |
 | [202102W3](weekly/202102W3.md) | [202102W4](weekly/202102W4.md) | [202103W1](weekly/202103W1.md) | [202103W2](weekly/202103W2.md) | [202103W3](weekly/202103W3.md) |
 | [202103W4](weekly/202103W4.md) | [202103W5](weekly/202103W5.md) | [202104W1](weekly/202104W1.md) | [202104W2](weekly/202104W2.md) | [202104W3](weekly/202104W3.md) |
-| [202104W4](weekly/202104W4.md) | [202105W1](weekly/202105W1.md) | | | | |
+| [202104W4](weekly/202104W4.md) | [202105W1](weekly/202105W1.md) | [202105W2](weekly/202105W2.md) | | | |
 
 ## List
 
@@ -79,6 +79,7 @@ OK! 27 posts in total. Keep going!
 
 #### 五月
 
+- [第 28 期：学会爱自己，你值得](weekly/202105W2.md)
 - [第 27 期：广度与深度](weekly/202105W1.md)
 
 #### 四月
