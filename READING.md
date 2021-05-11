@@ -49,6 +49,7 @@
 
 ## 技术
 
+1. [Pointers and Memory](http://cslibrary.stanford.edu/102/)，by Nick Parlante，2021 年 5 月
 1. [快乐的 Linux 命令行](http://billie66.github.io/TLCL/index.html)，by William Shotts，2021 年 4 月
 1. [Essential C](http://cslibrary.stanford.edu/101)，by Nick Parlante，2021 年 4 月
 1. 剑指 Offer，by 何海涛，2020 年  9 月
