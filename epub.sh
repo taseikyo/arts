@@ -2,7 +2,6 @@
 # @Date    : 2020-12-23 15:57:04
 # @Author  : Lewis Tian (taseikyo@gmail.com)
 # @Link    : github.com/taseikyo
-# @Version : python3.8
 
 # 将所有 Markdown 生成离线 epub 电子书
 # 完成了基本所有连接（锚点）的跳转
@@ -147,6 +146,10 @@ done
 
 # 替换每篇 weekly 中 readme 的跳转
 sed -i "s/#calendar/#arts-algorithm-review-tip-and-share/g" `grep -rl "readme" ./build`
+
+# 替换 webp 为 jpg 格式
+# !! 注意后面只要写有 webp 格式的图片，应该再保存一份 jpg 格式
+sed -i "s/webp)/jpg)/g" `grep -rl "webp)" ./build`
 
 echo "Generate pdf file using pandoc"
 # 利用 eisvogel 模板（Wandmalfarbe/pandoc-latex-template）直接生成 PDF
