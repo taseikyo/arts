@@ -62,7 +62,7 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 
 ## Calendar
 
-OK! 30 posts in total. Keep going!
+OK! 31 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
@@ -72,10 +72,15 @@ OK! 30 posts in total. Keep going!
 | [202102W3](weekly/202102W3.md) | [202102W4](weekly/202102W4.md) | [202103W1](weekly/202103W1.md) | [202103W2](weekly/202103W2.md) | [202103W3](weekly/202103W3.md) |
 | [202103W4](weekly/202103W4.md) | [202103W5](weekly/202103W5.md) | [202104W1](weekly/202104W1.md) | [202104W2](weekly/202104W2.md) | [202104W3](weekly/202104W3.md) |
 | [202104W4](weekly/202104W4.md) | [202105W1](weekly/202105W1.md) | [202105W2](weekly/202105W2.md) | [202105W3](weekly/202105W3.md) | [202105W4](weekly/202105W4.md) |
+| [202106W1](weekly/202106W1.md) | | | | | |
 
 ## List
 
 ### 2021
+
+#### 六月
+
+- [第 31 期：路在何方](weekly/202106W1.md)
 
 #### 五月
 
