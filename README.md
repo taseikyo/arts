@@ -62,7 +62,7 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 
 ## Calendar
 
-Nice! 35 posts in total. Keep going!
+Wow! 36 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
@@ -73,6 +73,7 @@ Nice! 35 posts in total. Keep going!
 | [202103W4](weekly/202103W4.md) | [202103W5](weekly/202103W5.md) | [202104W1](weekly/202104W1.md) | [202104W2](weekly/202104W2.md) | [202104W3](weekly/202104W3.md) |
 | [202104W4](weekly/202104W4.md) | [202105W1](weekly/202105W1.md) | [202105W2](weekly/202105W2.md) | [202105W3](weekly/202105W3.md) | [202105W4](weekly/202105W4.md) |
 | [202106W1](weekly/202106W1.md) | [202106W2](weekly/202106W2.md) | [202106W3](weekly/202106W3.md) | [202106W4](weekly/202106W4.md) | [202107W1](weekly/202107W1.md) |
+| [202107W2](weekly/202107W2.md) | | | | | |
 
 ## List
 
@@ -80,6 +81,7 @@ Nice! 35 posts in total. Keep going!
 
 #### 七月
 
+- [第 36 期：You pay, while I enjoy!](weekly/202107W2.md)
 - [第 35 期：如何与听众产生共情](weekly/202107W1.md)
 
 #### 六月
