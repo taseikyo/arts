@@ -6,6 +6,7 @@
 
 ### 七月
 
+- [第 37 期：上班很累，奖励自己一杯奶茶吧](weekly/202107W3.md)
 - [第 36 期：You pay, while I enjoy!](weekly/202107W2.md)
 - [第 35 期：如何与听众产生共情](weekly/202107W1.md)
 
