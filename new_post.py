@@ -52,6 +52,7 @@ def new_post():
     根据当前已有的 weekly 生成新的
     """
     files = os.listdir("weekly")
+    files.sort()
     current_id = len(files) + 1
     current_date = time.strftime("%Y-%m-%d", time.localtime())
     current_month = time.strftime("%Y%m", time.localtime())
