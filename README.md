@@ -62,7 +62,7 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 
 ## Calendar
 
-Well done! 38 posts in total. Keep going!
+OK! 39 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
@@ -73,7 +73,7 @@ Well done! 38 posts in total. Keep going!
 | [202103W4](weekly/202103W4.md) | [202103W5](weekly/202103W5.md) | [202104W1](weekly/202104W1.md) | [202104W2](weekly/202104W2.md) | [202104W3](weekly/202104W3.md) |
 | [202104W4](weekly/202104W4.md) | [202105W1](weekly/202105W1.md) | [202105W2](weekly/202105W2.md) | [202105W3](weekly/202105W3.md) | [202105W4](weekly/202105W4.md) |
 | [202106W1](weekly/202106W1.md) | [202106W2](weekly/202106W2.md) | [202106W3](weekly/202106W3.md) | [202106W4](weekly/202106W4.md) | [202107W1](weekly/202107W1.md) |
-| [202107W2](weekly/202107W2.md) | [202107W3](weekly/202107W3.md) | [202107W4](weekly/202107W4.md) | | | |
+| [202107W2](weekly/202107W2.md) | [202107W3](weekly/202107W3.md) | [202107W4](weekly/202107W4.md) | [202107W5](weekly/202107W5.md) | | |
 
 ## List
 
@@ -81,6 +81,7 @@ Well done! 38 posts in total. Keep going!
 
 #### 七月
 
+- [第 39 期：知识是个圆，知道的越多，不知道的越多。](weekly/202107W5.md)
 - [第 38 期：好记性不如烂笔头](weekly/202107W4.md)
 - [第 37 期：上班很累，奖励自己一杯奶茶吧](weekly/202107W3.md)
 - [第 36 期：You pay, while I enjoy!](weekly/202107W2.md)
