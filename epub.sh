@@ -16,12 +16,12 @@
 # 如果 pandoc 没有安装则先安装
 if ! type pandoc >/dev/null 2>&1; then
 	echo "Install pandoc"
-	sudo apt install pandoc -y
+	sudo apt-get install pandoc -y
 fi
 
 if ! type xelatex >/dev/null 2>&1; then
 	echo "Install latex"
-	sudo apt install texlive-full -y
+	sudo apt-get install texlive-full -y
 fi
 
 echo "Generate title.txt"
