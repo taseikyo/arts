@@ -62,7 +62,7 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 
 ## Calendar
 
-Excellent! 51 posts in total. Keep going!
+OK! 52 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
@@ -76,7 +76,7 @@ Excellent! 51 posts in total. Keep going!
 | [202107W2](weekly/202107W2.md) | [202107W3](weekly/202107W3.md) | [202107W4](weekly/202107W4.md) | [202107W5](weekly/202107W5.md) | [202108W1](weekly/202108W1.md) |
 | [202108W2](weekly/202108W2.md) | [202108W3](weekly/202108W3.md) | [202108W4](weekly/202108W4.md) | [202109W1](weekly/202109W1.md) | [202109W2](weekly/202109W2.md) |
 | [202109W3](weekly/202109W3.md) | [202109W4](weekly/202109W4.md) | [202110W1](weekly/202110W1.md) | [202110W2](weekly/202110W2.md) | [202110W3](weekly/202110W3.md) |
-| [202110W4](weekly/202110W4.md) | | | | | |
+| [202110W4](weekly/202110W4.md) | [202110W5](weekly/202110W5.md) | | | | |
 
 ## List
 
@@ -84,6 +84,7 @@ Excellent! 51 posts in total. Keep going!
 
 #### 十月
 
+- [第 52 期：什么时候能出现替代微信的应用？](weekly/202110W5.md)
 - [第 51 期：买断 V.S. 租赁](weekly/202110W4.md)
 - [第 50 期：手机坏了似乎整个人就社会性死亡了](weekly/202110W3.md)
 - [第 49 期：抓住机会，努力成长](weekly/202110W2.md)
