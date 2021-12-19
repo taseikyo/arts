@@ -62,7 +62,7 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 
 ## Calendar
 
-Amazing! 54 posts in total. Keep going!
+Amazing! 55 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
@@ -76,7 +76,7 @@ Amazing! 54 posts in total. Keep going!
 | [202107W2](weekly/202107W2.md) | [202107W3](weekly/202107W3.md) | [202107W4](weekly/202107W4.md) | [202107W5](weekly/202107W5.md) | [202108W1](weekly/202108W1.md) |
 | [202108W2](weekly/202108W2.md) | [202108W3](weekly/202108W3.md) | [202108W4](weekly/202108W4.md) | [202109W1](weekly/202109W1.md) | [202109W2](weekly/202109W2.md) |
 | [202109W3](weekly/202109W3.md) | [202109W4](weekly/202109W4.md) | [202110W1](weekly/202110W1.md) | [202110W2](weekly/202110W2.md) | [202110W3](weekly/202110W3.md) |
-| [202110W4](weekly/202110W4.md) | [202110W5](weekly/202110W5.md) | [202111W1](weekly/202111W1.md) | [202111W2](weekly/202111W2.md) | | |
+| [202110W4](weekly/202110W4.md) | [202110W5](weekly/202110W5.md) | [202111W1](weekly/202111W1.md) | [202111W2](weekly/202111W2.md) | [202111W3](weekly/202111W3.md) |
 
 ## List
 
@@ -84,6 +84,7 @@ Amazing! 54 posts in total. Keep going!
 
 #### 十一月
 
+- [第 55 期：早点睡，多读书](weekly/202111W3.md)
 - [第 54 期：天上不会掉馅饼](weekly/202111W2.md)
 - [第 53 期：一周年纪念](weekly/202111W1.md)
 
