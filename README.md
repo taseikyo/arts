@@ -62,7 +62,7 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 
 ## Calendar
 
-OK! 59 posts in total. Keep going!
+Amazing! 60 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
@@ -77,7 +77,7 @@ OK! 59 posts in total. Keep going!
 | [202108W2](weekly/202108W2.md) | [202108W3](weekly/202108W3.md) | [202108W4](weekly/202108W4.md) | [202109W1](weekly/202109W1.md) | [202109W2](weekly/202109W2.md) |
 | [202109W3](weekly/202109W3.md) | [202109W4](weekly/202109W4.md) | [202110W1](weekly/202110W1.md) | [202110W2](weekly/202110W2.md) | [202110W3](weekly/202110W3.md) |
 | [202110W4](weekly/202110W4.md) | [202110W5](weekly/202110W5.md) | [202111W1](weekly/202111W1.md) | [202111W2](weekly/202111W2.md) | [202111W3](weekly/202111W3.md) |
-| [202111W4](weekly/202111W4.md) | [202404W1](weekly/202404W1.md) | [202404W2](weekly/202404W2.md) | [202404W3](weekly/202404W3.md) | | |
+| [202111W4](weekly/202111W4.md) | [202404W1](weekly/202404W1.md) | [202404W2](weekly/202404W2.md) | [202404W3](weekly/202404W3.md) | [202404W4](weekly/202404W4.md) |
 
 ## List
 
@@ -85,6 +85,7 @@ OK! 59 posts in total. Keep going!
 
 #### 四月
 
+- [第 60 期：### 爱人先爱己](weekly/202404W4.md)
 - [第 59 期：互联网有记忆，但不完全有](weekly/202404W3.md)
 - [第 58 期：代码是否越简洁抽象越好](weekly/202404W2.md)
 - [第 57 期：2024 ARTS 重新开始](weekly/202404W1.md)
