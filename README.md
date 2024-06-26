@@ -62,7 +62,7 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 
 ## Calendar
 
-Excellent! 65 posts in total. Keep going!
+Outstanding! 66 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
@@ -79,6 +79,7 @@ Excellent! 65 posts in total. Keep going!
 | [202110W4](weekly/202110W4.md) | [202110W5](weekly/202110W5.md) | [202111W1](weekly/202111W1.md) | [202111W2](weekly/202111W2.md) | [202111W3](weekly/202111W3.md) |
 | [202111W4](weekly/202111W4.md) | [202404W1](weekly/202404W1.md) | [202404W2](weekly/202404W2.md) | [202404W3](weekly/202404W3.md) | [202404W4](weekly/202404W4.md) |
 | [202405W1](weekly/202405W1.md) | [202405W2](weekly/202405W2.md) | [202405W3](weekly/202405W3.md) | [202405W4](weekly/202405W4.md) | [202406W1](weekly/202406W1.md) |
+| [202406W2](weekly/202406W2.md) | | | | | |
 
 ## List
 
@@ -86,6 +87,7 @@ Excellent! 65 posts in total. Keep going!
 
 #### 六月
 
+- [第 66 期：反向拆解让人上瘾的套路，找回自律](weekly/202406W2.md)
 - [第 65 期：一个完美主义者的自我救赎](weekly/202406W1.md)
 
 #### 五月
