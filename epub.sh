@@ -22,6 +22,7 @@ fi
 if ! type xelatex >/dev/null 2>&1; then
 	echo "Install latex"
 	sudo apt-get install texlive-full -y
+    sudo apt-get install texlive-xetex -y
 fi
 
 echo "Generate title.txt"
