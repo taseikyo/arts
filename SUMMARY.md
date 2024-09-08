@@ -6,6 +6,7 @@
 
 ### 六月
 
+- [第 68 期：如何成为 -10x 工程师](weekly/202406W4.md)
 - [第 67 期：Average Manager vs. Great Manager](weekly/202406W3.md)
 - [第 66 期：反向拆解让人上瘾的套路，找回自律](weekly/202406W2.md)
 - [第 65 期：一个完美主义者的自我救赎](weekly/202406W1.md)
