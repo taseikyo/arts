@@ -62,7 +62,7 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 
 ## Calendar
 
-Well done! 72 posts in total. Keep going!
+OK! 73 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
@@ -80,11 +80,15 @@ Well done! 72 posts in total. Keep going!
 | [202111W4](weekly/202111W4.md) | [202404W1](weekly/202404W1.md) | [202404W2](weekly/202404W2.md) | [202404W3](weekly/202404W3.md) | [202404W4](weekly/202404W4.md) |
 | [202405W1](weekly/202405W1.md) | [202405W2](weekly/202405W2.md) | [202405W3](weekly/202405W3.md) | [202405W4](weekly/202405W4.md) | [202406W1](weekly/202406W1.md) |
 | [202406W2](weekly/202406W2.md) | [202406W3](weekly/202406W3.md) | [202406W4](weekly/202406W4.md) | [202407W1](weekly/202407W1.md) | [202407W2](weekly/202407W2.md) |
-| [202407W3](weekly/202407W3.md) | [202407W4](weekly/202407W4.md) | | | | |
+| [202407W3](weekly/202407W3.md) | [202407W4](weekly/202407W4.md) | [202408W1](weekly/202408W1.md) | | | |
 
 ## List
 
 ### 2024
+
+#### 八月
+
+- [第 73 期：人生六戒](weekly/202408W1.md)
 
 #### 七月
 
