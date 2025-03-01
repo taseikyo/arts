@@ -62,7 +62,7 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 
 ## Calendar
 
-OK! 75 posts in total. Keep going!
+OK! 76 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
@@ -81,6 +81,7 @@ OK! 75 posts in total. Keep going!
 | [202405W1](weekly/202405W1.md) | [202405W2](weekly/202405W2.md) | [202405W3](weekly/202405W3.md) | [202405W4](weekly/202405W4.md) | [202406W1](weekly/202406W1.md) |
 | [202406W2](weekly/202406W2.md) | [202406W3](weekly/202406W3.md) | [202406W4](weekly/202406W4.md) | [202407W1](weekly/202407W1.md) | [202407W2](weekly/202407W2.md) |
 | [202407W3](weekly/202407W3.md) | [202407W4](weekly/202407W4.md) | [202408W1](weekly/202408W1.md) | [202408W2](weekly/202408W2.md) | [202408W3](weekly/202408W3.md) |
+| [202408W4](weekly/202408W4.md) | | | | | |
 
 ## List
 
@@ -88,6 +89,7 @@ OK! 75 posts in total. Keep going!
 
 #### 八月
 
+- [第 76 期：情绪 ABC 理论](weekly/202408W4.md)
 - [第 75 期：37% 法则和最优停止理论](weekly/202408W3.md)
 - [第 74 期：收获最多的学习途径](weekly/202408W2.md)
 - [第 73 期：人生六戒](weekly/202408W1.md)
