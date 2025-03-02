@@ -62,7 +62,7 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 
 ## Calendar
 
-Nice! 77 posts in total. Keep going!
+Wow! 78 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
@@ -81,11 +81,15 @@ Nice! 77 posts in total. Keep going!
 | [202405W1](weekly/202405W1.md) | [202405W2](weekly/202405W2.md) | [202405W3](weekly/202405W3.md) | [202405W4](weekly/202405W4.md) | [202406W1](weekly/202406W1.md) |
 | [202406W2](weekly/202406W2.md) | [202406W3](weekly/202406W3.md) | [202406W4](weekly/202406W4.md) | [202407W1](weekly/202407W1.md) | [202407W2](weekly/202407W2.md) |
 | [202407W3](weekly/202407W3.md) | [202407W4](weekly/202407W4.md) | [202408W1](weekly/202408W1.md) | [202408W2](weekly/202408W2.md) | [202408W3](weekly/202408W3.md) |
-| [202408W4](weekly/202408W4.md) | [202408W5](weekly/202408W5.md) | | | | |
+| [202408W4](weekly/202408W4.md) | [202408W5](weekly/202408W5.md) | [202409W1](weekly/202409W1.md) | | | |
 
 ## List
 
 ### 2024
+
+#### 九月
+
+- [第 78 期：21 天效应](weekly/202409W1.md)
 
 #### 八月
 
