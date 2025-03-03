@@ -62,7 +62,7 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 
 ## Calendar
 
-Amazing! 79 posts in total. Keep going!
+Excellent! 80 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
@@ -81,7 +81,7 @@ Amazing! 79 posts in total. Keep going!
 | [202405W1](weekly/202405W1.md) | [202405W2](weekly/202405W2.md) | [202405W3](weekly/202405W3.md) | [202405W4](weekly/202405W4.md) | [202406W1](weekly/202406W1.md) |
 | [202406W2](weekly/202406W2.md) | [202406W3](weekly/202406W3.md) | [202406W4](weekly/202406W4.md) | [202407W1](weekly/202407W1.md) | [202407W2](weekly/202407W2.md) |
 | [202407W3](weekly/202407W3.md) | [202407W4](weekly/202407W4.md) | [202408W1](weekly/202408W1.md) | [202408W2](weekly/202408W2.md) | [202408W3](weekly/202408W3.md) |
-| [202408W4](weekly/202408W4.md) | [202408W5](weekly/202408W5.md) | [202409W1](weekly/202409W1.md) | [202409W2](weekly/202409W2.md) | | |
+| [202408W4](weekly/202408W4.md) | [202408W5](weekly/202408W5.md) | [202409W1](weekly/202409W1.md) | [202409W2](weekly/202409W2.md) | [202409W3](weekly/202409W3.md) |
 
 ## List
 
@@ -89,6 +89,7 @@ Amazing! 79 posts in total. Keep going!
 
 #### 九月
 
+- [第 80 期：何日可开眼看世界](weekly/202409W3.md)
 - [第 79 期：让 AI 帮你记录生活](weekly/202409W2.md)
 - [第 78 期：21 天效应](weekly/202409W1.md)
 
