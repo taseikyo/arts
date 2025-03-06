@@ -17,6 +17,12 @@ jobs:
         id: tag
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
 
+      - name: Get the tag commit message
+        id: tcm
+        run: |
+          COMMIT_MSG=$(git tag -l --format='%(contents:subject)' ${{ steps.tag.outputs.VERSION }})
+          echo "COMMIT_MSG=$COMMIT_MSG" >> $GITHUB_ENV
+
       - name: Create the epub
         run: bash ./epub.sh
 
@@ -28,6 +34,7 @@ jobs:
           name: ${{ steps.tag.outputs.VERSION }}
           prerelease: false
           draft: false
+          body: ${{ env.COMMIT_MSG }}
           files: |
             arts.epub
             arts.pdf
