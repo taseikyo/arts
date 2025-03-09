@@ -20,6 +20,7 @@ jobs:
       - name: Get the tag commit message
         id: tcm
         run: |
+          git fetch --depth=1 origin +refs/tags/*:refs/tags/*
           COMMIT_MSG=$(git tag -l --format='%(contents:subject)' ${{ steps.tag.outputs.VERSION }})
           echo "COMMIT_MSG=$COMMIT_MSG" >> $GITHUB_ENV
 
