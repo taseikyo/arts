@@ -62,7 +62,7 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 
 ## Calendar
 
-Well done! 84 posts in total. Keep going!
+Excellent! 85 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
@@ -82,7 +82,7 @@ Well done! 84 posts in total. Keep going!
 | [202406W2](weekly/202406W2.md) | [202406W3](weekly/202406W3.md) | [202406W4](weekly/202406W4.md) | [202407W1](weekly/202407W1.md) | [202407W2](weekly/202407W2.md) |
 | [202407W3](weekly/202407W3.md) | [202407W4](weekly/202407W4.md) | [202408W1](weekly/202408W1.md) | [202408W2](weekly/202408W2.md) | [202408W3](weekly/202408W3.md) |
 | [202408W4](weekly/202408W4.md) | [202408W5](weekly/202408W5.md) | [202409W1](weekly/202409W1.md) | [202409W2](weekly/202409W2.md) | [202409W3](weekly/202409W3.md) |
-| [202409W4](weekly/202409W4.md) | [202410W1](weekly/202410W1.md) | [202410W2](weekly/202410W2.md) | [202410W3](weekly/202410W3.md) | | |
+| [202409W4](weekly/202409W4.md) | [202410W1](weekly/202410W1.md) | [202410W2](weekly/202410W2.md) | [202410W3](weekly/202410W3.md) | [202410W4](weekly/202410W4.md) |
 
 ## List
 
@@ -90,6 +90,7 @@ Well done! 84 posts in total. Keep going!
 
 #### 十月
 
+- [第 85 期：勇敢地去追随自己的心灵和直觉](weekly/202410W4.md)
 - [第 84 期：过程就是答案](weekly/202410W3.md)
 - [第 83 期：最好的关系是相互滋养](weekly/202410W2.md)
 - [第 82 期：当收藏的博客变成 404，我们失去了什么？](weekly/202410W1.md)
