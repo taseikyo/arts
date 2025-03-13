@@ -24,7 +24,7 @@ TEMPLATE = """
 
 [readme](../README.md) | [previous]({previous_post}) | [next]({next_post})
 
-![](../images/2024/10/1.jpg "Weekly #{current_id}")
+![](../images/2024/11/1.jpg "Weekly #{current_id}")
 
 \\**Photo by Lewis Tian on Unsplash*
 
