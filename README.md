@@ -62,7 +62,7 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 
 ## Calendar
 
-Excellent! 85 posts in total. Keep going!
+Wow! 86 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
@@ -83,6 +83,7 @@ Excellent! 85 posts in total. Keep going!
 | [202407W3](weekly/202407W3.md) | [202407W4](weekly/202407W4.md) | [202408W1](weekly/202408W1.md) | [202408W2](weekly/202408W2.md) | [202408W3](weekly/202408W3.md) |
 | [202408W4](weekly/202408W4.md) | [202408W5](weekly/202408W5.md) | [202409W1](weekly/202409W1.md) | [202409W2](weekly/202409W2.md) | [202409W3](weekly/202409W3.md) |
 | [202409W4](weekly/202409W4.md) | [202410W1](weekly/202410W1.md) | [202410W2](weekly/202410W2.md) | [202410W3](weekly/202410W3.md) | [202410W4](weekly/202410W4.md) |
+| [202410W5](weekly/202410W5.md) | | | | | |
 
 ## List
 
@@ -90,6 +91,7 @@ Excellent! 85 posts in total. Keep going!
 
 #### 十月
 
+- [第 86 期：如果不能真实的面对自己，存在将失去意义。](weekly/202410W5.md)
 - [第 85 期：勇敢地去追随自己的心灵和直觉](weekly/202410W4.md)
 - [第 84 期：过程就是答案](weekly/202410W3.md)
 - [第 83 期：最好的关系是相互滋养](weekly/202410W2.md)
