@@ -62,7 +62,7 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 
 ## Calendar
 
-Wow! 86 posts in total. Keep going!
+Wow! 87 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
@@ -83,11 +83,15 @@ Wow! 86 posts in total. Keep going!
 | [202407W3](weekly/202407W3.md) | [202407W4](weekly/202407W4.md) | [202408W1](weekly/202408W1.md) | [202408W2](weekly/202408W2.md) | [202408W3](weekly/202408W3.md) |
 | [202408W4](weekly/202408W4.md) | [202408W5](weekly/202408W5.md) | [202409W1](weekly/202409W1.md) | [202409W2](weekly/202409W2.md) | [202409W3](weekly/202409W3.md) |
 | [202409W4](weekly/202409W4.md) | [202410W1](weekly/202410W1.md) | [202410W2](weekly/202410W2.md) | [202410W3](weekly/202410W3.md) | [202410W4](weekly/202410W4.md) |
-| [202410W5](weekly/202410W5.md) | | | | | |
+| [202410W5](weekly/202410W5.md) | [202411W1](weekly/202411W1.md) | | | | |
 
 ## List
 
 ### 2024
+
+#### 十一月
+
+- [第 87 期：第一性原理](weekly/202411W1.md)
 
 #### 十月
 
