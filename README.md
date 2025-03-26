@@ -62,7 +62,7 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 
 ## Calendar
 
-Nice! 90 posts in total. Keep going!
+Well done! 91 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
@@ -84,10 +84,15 @@ Nice! 90 posts in total. Keep going!
 | [202408W4](weekly/202408W4.md) | [202408W5](weekly/202408W5.md) | [202409W1](weekly/202409W1.md) | [202409W2](weekly/202409W2.md) | [202409W3](weekly/202409W3.md) |
 | [202409W4](weekly/202409W4.md) | [202410W1](weekly/202410W1.md) | [202410W2](weekly/202410W2.md) | [202410W3](weekly/202410W3.md) | [202410W4](weekly/202410W4.md) |
 | [202410W5](weekly/202410W5.md) | [202411W1](weekly/202411W1.md) | [202411W2](weekly/202411W2.md) | [202411W3](weekly/202411W3.md) | [202411W4](weekly/202411W4.md) |
+| [202412W1](weekly/202412W1.md) | | | | | |
 
 ## List
 
 ### 2024
+
+#### 十二月
+
+- [第 91 期：二八法则](weekly/202412W1.md)
 
 #### 十一月
 
