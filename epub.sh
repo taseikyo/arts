@@ -14,23 +14,23 @@
 # 生成的 epub 电子书的标题、作者、License 确实都没了，title.txt 的内容堆在首页
 
 # 如果 pandoc 没有安装则先安装
-if ! type pandoc >/dev/null 2>&1; then
-	echo "Install pandoc"
-	# sudo apt-get install pandoc -y
-	# 2025/3/1 更新，通过 apt 安装的 pandoc 是老版本的（3.1.3）
-	# 而使用的模板有个更新需要使用 3.2.1+ 版本的 pandoc，因此需要手动安装
-	# https://github.com/Wandmalfarbe/pandoc-latex-template/issues/405
-	sudo apt install -y curl
-	tag=3.6.3
-	wget https://github.com/jgm/pandoc/releases/download/$tag/pandoc-$tag-1-amd64.deb
-	sudo dpkg -i pandoc-$tag-1-amd64.deb
-fi
+# if ! type pandoc >/dev/null 2>&1; then
+echo "Install pandoc"
+# sudo apt-get install pandoc -y
+# 2025/3/1 更新，通过 apt 安装的 pandoc 是老版本的（3.1.3）
+# 而使用的模板有个更新需要使用 3.2.1+ 版本的 pandoc，因此需要手动安装
+# https://github.com/Wandmalfarbe/pandoc-latex-template/issues/405
+sudo apt install -y curl
+tag=3.6.3
+wget https://github.com/jgm/pandoc/releases/download/$tag/pandoc-$tag-1-amd64.deb
+sudo dpkg -i pandoc-$tag-1-amd64.deb
+# fi
 
-if ! type xelatex >/dev/null 2>&1; then
-	echo "Install latex"
-	sudo apt-get install texlive-full -y
-    sudo apt-get install texlive-xetex -y
-fi
+# if ! type xelatex >/dev/null 2>&1; then
+echo "Install latex"
+sudo apt-get install texlive-full -y
+sudo apt-get install texlive-xetex -y
+# fi
 
 echo "Generate title.txt"
 echo -e "---\ntitle: \"arts: algorithm, review, tip and share\"\n\
