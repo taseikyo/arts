@@ -31,5 +31,5 @@ jobs:
       - name: Update README.md and SUMMARY.md
         run: |
           git add README.md SUMMARY.md
-          git commit -m "Update README.md && SUMMARY.md" -a ||  true
+          git commit -m "[GitHubBot] Update README.md && SUMMARY.md" -a ||  true
           git push --force origin HEAD:$GITHUB_REF || true
