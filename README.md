@@ -62,7 +62,7 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 
 ## Calendar
 
-Well done! 98 posts in total. Keep going!
+Wow! 99 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
@@ -85,7 +85,7 @@ Well done! 98 posts in total. Keep going!
 | [202409W4](weekly/202409W4.md) | [202410W1](weekly/202410W1.md) | [202410W2](weekly/202410W2.md) | [202410W3](weekly/202410W3.md) | [202410W4](weekly/202410W4.md) |
 | [202410W5](weekly/202410W5.md) | [202411W1](weekly/202411W1.md) | [202411W2](weekly/202411W2.md) | [202411W3](weekly/202411W3.md) | [202411W4](weekly/202411W4.md) |
 | [202412W1](weekly/202412W1.md) | [202412W2](weekly/202412W2.md) | [202412W3](weekly/202412W3.md) | [202412W4](weekly/202412W4.md) | [202501W1](weekly/202501W1.md) |
-| [202501W2](weekly/202501W2.md) | [202501W3](weekly/202501W3.md) | [202501W4](weekly/202501W4.md) | | | |
+| [202501W2](weekly/202501W2.md) | [202501W3](weekly/202501W3.md) | [202501W4](weekly/202501W4.md) | [202501W5](weekly/202501W5.md) | | |
 
 ## List
 
@@ -93,6 +93,7 @@ Well done! 98 posts in total. Keep going!
 
 #### 一月
 
+- [第 99 期：拉图尔定律](weekly/202501W5.md)
 - [第 98 期：由 Flappy Bird 想到的技术观、哲学观和人生观](weekly/202501W4.md)
 - [第 97 期：洛克忠告](weekly/202501W3.md)
 - [第 96 期：101°C理论](weekly/202501W2.md)
