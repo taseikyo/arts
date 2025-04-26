@@ -62,7 +62,7 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 
 ## Calendar
 
-Wow! 99 posts in total. Keep going!
+Wow! 100 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
@@ -85,11 +85,15 @@ Wow! 99 posts in total. Keep going!
 | [202409W4](weekly/202409W4.md) | [202410W1](weekly/202410W1.md) | [202410W2](weekly/202410W2.md) | [202410W3](weekly/202410W3.md) | [202410W4](weekly/202410W4.md) |
 | [202410W5](weekly/202410W5.md) | [202411W1](weekly/202411W1.md) | [202411W2](weekly/202411W2.md) | [202411W3](weekly/202411W3.md) | [202411W4](weekly/202411W4.md) |
 | [202412W1](weekly/202412W1.md) | [202412W2](weekly/202412W2.md) | [202412W3](weekly/202412W3.md) | [202412W4](weekly/202412W4.md) | [202501W1](weekly/202501W1.md) |
-| [202501W2](weekly/202501W2.md) | [202501W3](weekly/202501W3.md) | [202501W4](weekly/202501W4.md) | [202501W5](weekly/202501W5.md) | | |
+| [202501W2](weekly/202501W2.md) | [202501W3](weekly/202501W3.md) | [202501W4](weekly/202501W4.md) | [202501W5](weekly/202501W5.md) | [202502W1](weekly/202502W1.md) |
 
 ## List
 
 ### 2025
+
+#### 二月
+
+- [第 100 期：一分钟管理法](weekly/202502W1.md)
 
 #### 一月
 
