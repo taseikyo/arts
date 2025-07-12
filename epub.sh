@@ -23,7 +23,7 @@ if ! type pandoc >/dev/null 2>&1; then
 	sudo apt install -y curl
 	tag=3.7
 	wget https://github.com/jgm/pandoc/releases/download/$tag/pandoc-$tag-1-amd64.deb
-	sudo dpkg -i pandoc-$tag-1-amd64.deb
+	sudo dpkg -i pandoc-$tag-1-amd64.deb >/dev/null
 fi
 
 if ! type xelatex >/dev/null 2>&1; then
