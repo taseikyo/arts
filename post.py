@@ -28,12 +28,7 @@ TEMPLATE = """
 
 \\**Photo by Lewis Tian on Unsplash*
 
-## Table of Contents
-
-- [algorithm](#algorithm-)
-- [review](#review-)
-- [tip](#tip-)
-- [share](#share-)
+-[toc]
 
 ## algorithm [🔝](#weekly-{current_id})
 
