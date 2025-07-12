@@ -3,6 +3,22 @@ set -e
 
 echo "🔍 pre-commit hook 正在执行：检查链接是否重复..."
 
+# ✅ 链接白名单（支持正则匹配）
+whitelist=(
+    '^https://unsplash.com/@equeen$'
+)
+
+# 判断链接是否在白名单中
+is_whitelisted() {
+    local link="$1"
+    for pattern in "${whitelist[@]}"; do
+        if [[ "$link" =~ $pattern ]]; then
+            return 0
+        fi
+    done
+    return 1
+}
+
 # 提取新增链接（支持 Markdown 和裸链接）
 new_links=$(git diff --cached --unified=0 | grep '^+' | grep -v '^+++' \
   | perl -nE '
@@ -32,11 +48,15 @@ conflict_found=false
 while read -r link; do
     match=$(grep -F "$link" "$map_file" || true)
     if [[ -n "$match" ]]; then
-        if [ "$conflict_found" = false ]; then
-            echo "❌ 检测到重复链接，禁止提交："
-            conflict_found=true
+        if is_whitelisted "$link"; then
+            echo "⚪ $link   ← 已存在于 $(echo "$match" | head -n1 | cut -f2)，但已在白名单中"
+        else
+            if [ "$conflict_found" = false ]; then
+                echo "❌ 检测到重复链接，禁止提交："
+                conflict_found=true
+            fi
+            echo "  - $link   ← 已出现在 $(echo "$match" | head -n1 | cut -f2)"
         fi
-        echo "  - $link   ← 已出现在 $(echo "$match" | head -n1 | cut -f2)"
     fi
 done <<< "$new_links"
 
