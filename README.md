@@ -62,7 +62,7 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 
 ## Calendar
 
-Nice! 102 posts in total. Keep going!
+Nice! 103 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
@@ -86,7 +86,7 @@ Nice! 102 posts in total. Keep going!
 | [202410W5](weekly/202410W5.md) | [202411W1](weekly/202411W1.md) | [202411W2](weekly/202411W2.md) | [202411W3](weekly/202411W3.md) | [202411W4](weekly/202411W4.md) |
 | [202412W1](weekly/202412W1.md) | [202412W2](weekly/202412W2.md) | [202412W3](weekly/202412W3.md) | [202412W4](weekly/202412W4.md) | [202501W1](weekly/202501W1.md) |
 | [202501W2](weekly/202501W2.md) | [202501W3](weekly/202501W3.md) | [202501W4](weekly/202501W4.md) | [202501W5](weekly/202501W5.md) | [202502W1](weekly/202502W1.md) |
-| [202502W2](weekly/202502W2.md) | [202502W3](weekly/202502W3.md) | | | | |
+| [202502W2](weekly/202502W2.md) | [202502W3](weekly/202502W3.md) | [202502W4](weekly/202502W4.md) | | | |
 
 ## List
 
@@ -94,6 +94,7 @@ Nice! 102 posts in total. Keep going!
 
 #### 二月
 
+- [第 103 期：缄默效应](weekly/202502W4.md)
 - [第 102 期：后发劣势](weekly/202502W3.md)
 - [第 101 期：领导力 | Leadership Challenge](weekly/202502W2.md)
 - [第 100 期：一分钟管理法](weekly/202502W1.md)

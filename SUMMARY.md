@@ -6,6 +6,7 @@
 
 ### 二月
 
+- [第 103 期：缄默效应](weekly/202502W4.md)
 - [第 102 期：后发劣势](weekly/202502W3.md)
 - [第 101 期：领导力 | Leadership Challenge](weekly/202502W2.md)
 - [第 100 期：一分钟管理法](weekly/202502W1.md)
