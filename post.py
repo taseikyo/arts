@@ -14,13 +14,11 @@ import time
 import random
 
 TEMPLATE = """
-> @Author  : Lewis Tian (taseikyo@gmail.com)
->
-> @Link    : github.com/taseikyo
->
-> @Range   : {begin_date} - {begin_date}
-
 # Weekly #{current_id}
+
+@Range : {begin_date} - {begin_date}
+
+@City: Hangzhou
 
 [readme](../README.md) | [previous]({previous_post}) | [next]({next_post})
 
