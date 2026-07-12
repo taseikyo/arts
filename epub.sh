@@ -13,6 +13,15 @@
 # [WARNING] This document format requires a nonempty <title> element.
 # 生成的 epub 电子书的标题、作者、License 确实都没了，title.txt 的内容堆在首页
 
+# 2026/07/12 更新，安装 latex 报错，先 update 一下，报错信息贴在下面
+# 顺便把 pandoc 更新到最新版本好了
+# Not building database; man-db/auto-update is not 'true'.
+# Install latex
+# E: Failed to fetch https://security.ubuntu.com/ubuntu/pool/main/libi/libinput/libinput-bin_1.25.0-1ubuntu3.4_amd64.deb  404  Not Found [IP: 40.81.13.82 80]
+# E: Failed to fetch https://security.ubuntu.com/ubuntu/pool/main/libi/libinput/libinput10_1.25.0-1ubuntu3.4_amd64.deb  404  Not Found [IP: 40.81.13.82 80]
+# E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+sudo apt-get update
+
 # 如果 pandoc 没有安装则先安装
 if ! type pandoc >/dev/null 2>&1; then
 	echo "Install pandoc"
@@ -21,7 +30,7 @@ if ! type pandoc >/dev/null 2>&1; then
 	# 而使用的模板有个更新需要使用 3.2.1+ 版本的 pandoc，因此需要手动安装
 	# https://github.com/Wandmalfarbe/pandoc-latex-template/issues/405
 	sudo apt install -y curl
-	tag=3.7
+	tag=3.10
 	wget https://github.com/jgm/pandoc/releases/download/$tag/pandoc-$tag-1-amd64.deb
 	sudo dpkg -i pandoc-$tag-1-amd64.deb >/dev/null
 fi
