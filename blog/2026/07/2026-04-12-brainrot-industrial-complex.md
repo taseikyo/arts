@@ -1,4 +1,4 @@
-# The Brainrot Industrial Complex
+# [The Brainrot Industrial Complex](https://jshamsul.com/essays/2026-04-12-brainrot-industrial-complex)
 
 > You Are Not Distracted. You Are Being Processed.
 
