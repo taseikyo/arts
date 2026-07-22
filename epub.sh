@@ -3,6 +3,9 @@
 # @Author  : Lewis Tian (taseikyo@gmail.com)
 # @Link    : github.com/taseikyo
 
+# 2026/07/15 更新，GitHub Actions 中任意步骤失败时立即退出，方便定位错误
+set -e
+
 # 将所有 Markdown 生成离线 epub 电子书
 # 完成了基本所有连接（锚点）的跳转
 # 由于每周的 Weekly 中 ARTS（algorithm、review、tip 和 share）的格式转化导致没有锚点可跳
@@ -37,8 +40,22 @@ fi
 
 if ! type xelatex >/dev/null 2>&1; then
 	echo "Install latex"
-	sudo apt-get install texlive-full -y >/dev/null
-    sudo apt-get install texlive-xetex -y >/dev/null
+
+	# 2026/07/15 更新，GitHub Actions runner 更新后 eisvogel 模板缺少 sourcesans.sty
+	# texlive-full 安装结果不可控且隐藏错误，因此明确安装 PDF 生成需要的 latex 依赖
+	sudo apt-get update
+	sudo apt-get install -y \
+	    texlive-xetex \
+	    texlive-latex-extra \
+	    texlive-fonts-extra \
+	    texlive-fonts-recommended \
+	    fonts-noto-cjk
+
+	# 2026/07/15 更新，检查 eisvogel 依赖是否安装成功
+	if ! kpsewhich sourcesans.sty >/dev/null; then
+		echo "Missing sourcesans.sty"
+		exit 1
+	fi
 fi
 
 echo "Generate title.txt"
