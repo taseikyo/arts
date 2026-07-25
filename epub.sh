@@ -38,24 +38,34 @@ if ! type pandoc >/dev/null 2>&1; then
 	sudo dpkg -i pandoc-$tag-1-amd64.deb >/dev/null
 fi
 
-if ! type xelatex >/dev/null 2>&1; then
+if ! type xelatex >/dev/null 2>&1 || \
+   ! kpsewhich sourcesans.sty >/dev/null 2>&1; then
+
 	echo "Install latex"
 
 	# 2026/07/15 更新，GitHub Actions runner 更新后 eisvogel 模板缺少 sourcesans.sty
 	# texlive-full 安装结果不可控且隐藏错误，因此明确安装 PDF 生成需要的 latex 依赖
+
+	# 2026/7/23 更新完依然报错，再次让 ChatGPT 帮我修改脚本，增加了 fonts-source-sans-pro
+	# 并执行 mktexlsr 刷新 tex
+
 	sudo apt-get update
+
 	sudo apt-get install -y \
 	    texlive-xetex \
 	    texlive-latex-extra \
 	    texlive-fonts-extra \
 	    texlive-fonts-recommended \
+	    fonts-source-sans-pro \
 	    fonts-noto-cjk
 
-	# 2026/07/15 更新，检查 eisvogel 依赖是否安装成功
-	if ! kpsewhich sourcesans.sty >/dev/null; then
-		echo "Missing sourcesans.sty"
-		exit 1
-	fi
+	sudo mktexlsr
+fi
+
+# 2026/07/15 更新，检查 eisvogel 依赖是否安装成功
+if ! kpsewhich sourcesans.sty >/dev/null; then
+	echo "Missing sourcesans.sty"
+	exit 1
 fi
 
 echo "Generate title.txt"
