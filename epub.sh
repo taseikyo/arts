@@ -46,8 +46,8 @@ if ! type xelatex >/dev/null 2>&1 || \
 	# 2026/07/15 更新，GitHub Actions runner 更新后 eisvogel 模板缺少 sourcesans.sty
 	# texlive-full 安装结果不可控且隐藏错误，因此明确安装 PDF 生成需要的 latex 依赖
 
-	# 2026/7/23 更新完依然报错，再次让 ChatGPT 帮我修改脚本，增加了 fonts-source-sans-pro
-	# 并执行 mktexlsr 刷新 tex
+	# 2026/7/23 更新，fonts-source-sans-pro 在 GitHub Actions Ubuntu runner 中不存在
+	# sourcesans.sty 实际由 texlive-fonts-extra 提供，因此移除 fonts-source-sans-pro
 
 	sudo apt-get update
 
@@ -56,7 +56,6 @@ if ! type xelatex >/dev/null 2>&1 || \
 	    texlive-latex-extra \
 	    texlive-fonts-extra \
 	    texlive-fonts-recommended \
-	    fonts-source-sans-pro \
 	    fonts-noto-cjk
 
 	sudo mktexlsr
@@ -65,6 +64,7 @@ fi
 # 2026/07/15 更新，检查 eisvogel 依赖是否安装成功
 if ! kpsewhich sourcesans.sty >/dev/null; then
 	echo "Missing sourcesans.sty"
+	kpsewhich --all sourcesans.sty || true
 	exit 1
 fi
 
