@@ -22,3 +22,19 @@ func productExceptSelf(nums []int) []int {
 
 	return res
 }
+
+func productExceptSelf(nums []int) []int {
+	length := len(nums)
+	res := make([]int, length)
+	res[0] = 1
+	for i := 1; i < length; i++ {
+		res[i] = nums[i-1] * res[i-1]
+	}
+	tmp := nums[length-1]
+	for i := length - 2; i >= 0; i-- {
+		res[i] = tmp * res[i]
+		tmp = tmp * nums[i]
+	}
+
+	return res
+}
