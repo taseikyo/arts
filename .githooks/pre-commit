@@ -6,6 +6,7 @@ echo "🔍 pre-commit hook 正在执行：检查链接是否重复..."
 # ✅ 链接白名单（支持正则匹配）
 whitelist=(
     '^https://unsplash\.com/@equeen(/.*)?$'
+    '^https://unsplash.com/@matt909(/.*)?$'
     '^https://leetcode\.cn/problems/[^/]+.*$'
     '^https://zishutongji.zaixianapp.cn.*$'
 )
