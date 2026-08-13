@@ -71,3 +71,24 @@ func reverse(nums []int, l, r int) {
 		r--
 	}
 }
+
+func rotate(nums []int, k int)  {
+    length := len(nums)
+    if k > len(nums) {
+        k = k % length
+    }
+    if k == 0 {
+        return
+    }
+    reverse(nums, 0, length-1)
+    reverse(nums, 0, k-1)
+    reverse(nums, k, length-1)
+}
+
+func reverse(nums []int, left, right int) {
+    for left < right {
+        nums[left], nums[right] = nums[right], nums[left]
+        left++
+        right--
+    }
+}

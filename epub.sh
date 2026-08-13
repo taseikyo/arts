@@ -59,6 +59,13 @@ if ! type xelatex >/dev/null 2>&1 || \
 	    fonts-noto-cjk
 
 	sudo mktexlsr
+
+	# 如果 sourcesans.sty 仍然缺失 -> 直接 fallback
+	# 把 GitHub Actions 的运行版本改为 ubuntu-22.04
+	if ! kpsewhich sourcesans.sty >/dev/null 2>&1; then
+		echo "Fallback: install texlive-full (this may take time)"
+		sudo apt-get install -y texlive-full
+	fi
 fi
 
 # 2026/07/15 更新，检查 eisvogel 依赖是否安装成功
