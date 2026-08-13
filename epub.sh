@@ -3,9 +3,6 @@
 # @Author  : Lewis Tian (taseikyo@gmail.com)
 # @Link    : github.com/taseikyo
 
-# 2026/07/15 更新，GitHub Actions 中任意步骤失败时立即退出，方便定位错误
-set -e
-
 # 将所有 Markdown 生成离线 epub 电子书
 # 完成了基本所有连接（锚点）的跳转
 # 由于每周的 Weekly 中 ARTS（algorithm、review、tip 和 share）的格式转化导致没有锚点可跳
@@ -16,15 +13,6 @@ set -e
 # [WARNING] This document format requires a nonempty <title> element.
 # 生成的 epub 电子书的标题、作者、License 确实都没了，title.txt 的内容堆在首页
 
-# 2026/07/12 更新，安装 latex 报错，先 update 一下，报错信息贴在下面
-# 顺便把 pandoc 更新到最新版本好了
-# Not building database; man-db/auto-update is not 'true'.
-# Install latex
-# E: Failed to fetch https://security.ubuntu.com/ubuntu/pool/main/libi/libinput/libinput-bin_1.25.0-1ubuntu3.4_amd64.deb  404  Not Found [IP: 40.81.13.82 80]
-# E: Failed to fetch https://security.ubuntu.com/ubuntu/pool/main/libi/libinput/libinput10_1.25.0-1ubuntu3.4_amd64.deb  404  Not Found [IP: 40.81.13.82 80]
-# E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
-sudo apt-get update
-
 # 如果 pandoc 没有安装则先安装
 if ! type pandoc >/dev/null 2>&1; then
 	echo "Install pandoc"
@@ -33,46 +21,15 @@ if ! type pandoc >/dev/null 2>&1; then
 	# 而使用的模板有个更新需要使用 3.2.1+ 版本的 pandoc，因此需要手动安装
 	# https://github.com/Wandmalfarbe/pandoc-latex-template/issues/405
 	sudo apt install -y curl
-	tag=3.10
+	tag=3.7
 	wget https://github.com/jgm/pandoc/releases/download/$tag/pandoc-$tag-1-amd64.deb
 	sudo dpkg -i pandoc-$tag-1-amd64.deb >/dev/null
 fi
 
-if ! type xelatex >/dev/null 2>&1 || \
-   ! kpsewhich sourcesans.sty >/dev/null 2>&1; then
-
+if ! type xelatex >/dev/null 2>&1; then
 	echo "Install latex"
-
-	# 2026/07/15 更新，GitHub Actions runner 更新后 eisvogel 模板缺少 sourcesans.sty
-	# texlive-full 安装结果不可控且隐藏错误，因此明确安装 PDF 生成需要的 latex 依赖
-
-	# 2026/7/23 更新，fonts-source-sans-pro 在 GitHub Actions Ubuntu runner 中不存在
-	# sourcesans.sty 实际由 texlive-fonts-extra 提供，因此移除 fonts-source-sans-pro
-
-	sudo apt-get update
-
-	sudo apt-get install -y \
-	    texlive-xetex \
-	    texlive-latex-extra \
-	    texlive-fonts-extra \
-	    texlive-fonts-recommended \
-	    fonts-noto-cjk
-
-	sudo mktexlsr
-
-	# 如果 sourcesans.sty 仍然缺失 -> 直接 fallback
-	# 把 GitHub Actions 的运行版本改为 ubuntu-22.04
-	if ! kpsewhich sourcesans.sty >/dev/null 2>&1; then
-		echo "Fallback: install texlive-full (this may take time)"
-		sudo apt-get install -y texlive-full
-	fi
-fi
-
-# 2026/07/15 更新，检查 eisvogel 依赖是否安装成功
-if ! kpsewhich sourcesans.sty >/dev/null; then
-	echo "Missing sourcesans.sty"
-	kpsewhich --all sourcesans.sty || true
-	exit 1
+	sudo apt-get install texlive-full -y >/dev/null
+    sudo apt-get install texlive-xetex -y >/dev/null
 fi
 
 echo "Generate title.txt"
