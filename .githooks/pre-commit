@@ -9,6 +9,7 @@ whitelist=(
     '^https://unsplash.com/@matt909(/.*)?$'
     '^https://leetcode\.cn/problems/[^/]+.*$'
     '^https://zishutongji.zaixianapp.cn.*$'
+    '^https://music.163.com/#/song.*$'
 )
 
 # 判断链接是否在白名单中
