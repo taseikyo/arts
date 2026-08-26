@@ -62,7 +62,7 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 
 ## Calendar
 
-Amazing! 114 posts in total. Keep going!
+Well done! 115 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
@@ -88,7 +88,7 @@ Amazing! 114 posts in total. Keep going!
 | [202501W2](weekly/202501W2.md) | [202501W3](weekly/202501W3.md) | [202501W4](weekly/202501W4.md) | [202501W5](weekly/202501W5.md) | [202502W1](weekly/202502W1.md) |
 | [202502W2](weekly/202502W2.md) | [202502W3](weekly/202502W3.md) | [202502W4](weekly/202502W4.md) | [202503W1](weekly/202503W1.md) | [202503W2](weekly/202503W2.md) |
 | [202503W3](weekly/202503W3.md) | [202503W4](weekly/202503W4.md) | [202607W2](weekly/202607W2.md) | [202607W3](weekly/202607W3.md) | [202607W4](weekly/202607W4.md) |
-| [202607W5](weekly/202607W5.md) | [202608W1](weekly/202608W1.md) | [202608W2](weekly/202608W2.md) | [202608W3](weekly/202608W3.md) | | |
+| [202607W5](weekly/202607W5.md) | [202608W1](weekly/202608W1.md) | [202608W2](weekly/202608W2.md) | [202608W3](weekly/202608W3.md) | [202608W4](weekly/202608W4.md) |
 
 ## List
 
@@ -96,7 +96,8 @@ Amazing! 114 posts in total. Keep going!
 
 #### 八月
 
-- [第 114 期：### 沉没成本 边际成本 机会成本](weekly/202608W3.md)
+- [第 115 期：帕累托改进](weekly/202608W4.md)
+- [第 114 期：沉没成本 边际成本 机会成本](weekly/202608W3.md)
 - [第 113 期：西瓜效应](weekly/202608W2.md)
 - [第 112 期：比较优势原理](weekly/202608W1.md)
 
