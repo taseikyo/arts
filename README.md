@@ -62,7 +62,7 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 
 ## Calendar
 
-Well done! 115 posts in total. Keep going!
+Amazing! 116 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
@@ -89,10 +89,15 @@ Well done! 115 posts in total. Keep going!
 | [202502W2](weekly/202502W2.md) | [202502W3](weekly/202502W3.md) | [202502W4](weekly/202502W4.md) | [202503W1](weekly/202503W1.md) | [202503W2](weekly/202503W2.md) |
 | [202503W3](weekly/202503W3.md) | [202503W4](weekly/202503W4.md) | [202607W2](weekly/202607W2.md) | [202607W3](weekly/202607W3.md) | [202607W4](weekly/202607W4.md) |
 | [202607W5](weekly/202607W5.md) | [202608W1](weekly/202608W1.md) | [202608W2](weekly/202608W2.md) | [202608W3](weekly/202608W3.md) | [202608W4](weekly/202608W4.md) |
+| [202609W1](weekly/202609W1.md) | | | | | |
 
 ## List
 
 ### 2026
+
+#### 九月
+
+- [第 116 期：损失厌恶](weekly/202609W1.md)
 
 #### 八月
 
