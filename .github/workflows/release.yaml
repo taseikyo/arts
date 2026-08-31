@@ -1,36 +1,40 @@
+name: Release PDF/EPUB
+
 on:
   push:
     tags:
       - "w*"
 
-name: Release asset workflow
-
 jobs:
   release:
     name: Release epub
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
+    timeout-minutes: 30
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
       - name: Get the short tag
         id: tag
-        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+        run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> "$GITHUB_OUTPUT"
 
       - name: Get the tag commit message
         id: tcm
         run: |
-          git fetch --depth=1 origin +refs/tags/*:refs/tags/*
-          COMMIT_MSG=$(git tag -l --format='%(contents:subject)' ${{ steps.tag.outputs.VERSION }})
-          echo "COMMIT_MSG=$COMMIT_MSG" >> $GITHUB_ENV
+          VERSION="${{ steps.tag.outputs.VERSION }}"
+          COMMIT_MSG=$(git tag -l --format='%(contents:subject)' "$VERSION")
+          echo "COMMIT_MSG=$COMMIT_MSG" >> "$GITHUB_ENV"
 
       - name: Create the epub
         run: bash ./epub.sh
 
       - name: Create a new release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           name: ${{ steps.tag.outputs.VERSION }}
           prerelease: false
