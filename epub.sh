@@ -28,8 +28,10 @@ fi
 
 if ! type xelatex >/dev/null 2>&1; then
 	echo "Install latex"
+	sudo apt-get update
 	sudo apt-get install texlive-full -y >/dev/null
     sudo apt-get install texlive-xetex -y >/dev/null
+    sudo apt-get install texlive-fonts-recommended texlive-fonts-extra -y >/dev/null
 fi
 
 echo "Generate title.txt"
