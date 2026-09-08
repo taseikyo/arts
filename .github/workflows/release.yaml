@@ -12,15 +12,19 @@ jobs:
     timeout-minutes: 30
 
     steps:
+      # Checkout source code
       - name: Checkout code
         uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
+      # Get tag name
       - name: Get the short tag
         id: tag
-        run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> "$GITHUB_OUTPUT"
+        run: |
+          echo "VERSION=${GITHUB_REF#refs/tags/}" >> "$GITHUB_OUTPUT"
 
+      # Get tag commit message
       - name: Get the tag commit message
         id: tcm
         run: |
@@ -28,11 +32,13 @@ jobs:
           COMMIT_MSG=$(git tag -l --format='%(contents:subject)' "$VERSION")
           echo "COMMIT_MSG=$COMMIT_MSG" >> "$GITHUB_ENV"
 
+      # Generate epub/pdf
       - name: Create the epub
         run: bash ./epub.sh
 
+      # Create GitHub Release
       - name: Create a new release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
