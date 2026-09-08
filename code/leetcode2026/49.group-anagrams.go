@@ -5,23 +5,23 @@
  */
 
 func groupAnagrams(strs []string) [][]string {
-    cache := make(map[string][]string)
-    for _, str := range strs {
-        bstr := []byte(str)
-        sort.Slice(bstr, func(i, j int) bool {
-            return bstr[i] < bstr[j]
-        })
-        sstr := string(bstr)
-        if _, ok := cache[sstr]; ok {
-            cache[sstr] = append(cache[sstr], str)
-        } else {
-            cache[sstr] = []string{str}
-        }
-    }
-    res := make([][]string, 0)
-    for _, v := range cache {
-        res = append(res, v)
-    }
+	cache := make(map[string][]string)
+	for _, str := range strs {
+		bstr := []byte(str)
+		sort.Slice(bstr, func(i, j int) bool {
+			return bstr[i] < bstr[j]
+		})
+		sstr := string(bstr)
+		if _, ok := cache[sstr]; ok {
+			cache[sstr] = append(cache[sstr], str)
+		} else {
+			cache[sstr] = []string{str}
+		}
+	}
+	res := make([][]string, 0)
+	for _, v := range cache {
+		res = append(res, v)
+	}
 
-    return res
+	return res
 }
