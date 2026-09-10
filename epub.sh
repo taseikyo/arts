@@ -21,15 +21,17 @@ if ! type pandoc >/dev/null 2>&1; then
 	# 而使用的模板有个更新需要使用 3.2.1+ 版本的 pandoc，因此需要手动安装
 	# https://github.com/Wandmalfarbe/pandoc-latex-template/issues/405
 	sudo apt install -y curl
-	tag=3.7
+	tag=3.11
 	wget https://github.com/jgm/pandoc/releases/download/$tag/pandoc-$tag-1-amd64.deb
 	sudo dpkg -i pandoc-$tag-1-amd64.deb >/dev/null
 fi
 
 if ! type xelatex >/dev/null 2>&1; then
 	echo "Install latex"
+	sudo apt-get update
 	sudo apt-get install texlive-full -y >/dev/null
     sudo apt-get install texlive-xetex -y >/dev/null
+    sudo apt-get install texlive-fonts-recommended texlive-fonts-extra -y >/dev/null
 fi
 
 echo "Generate title.txt"

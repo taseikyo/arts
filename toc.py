@@ -5,11 +5,13 @@ import re
 import sys
 from pathlib import Path
 
+
 def strip_markdown_links(text: str) -> str:
     """
     去除 Markdown 链接：[文本](链接) → 文本
     """
-    return re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', text)
+    return re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)
+
 
 def slugify(title: str) -> str:
     """
@@ -20,6 +22,7 @@ def slugify(title: str) -> str:
     slug = re.sub(r"[^\w\- ]+", "", slug)
     slug = slug.replace(" ", "-")
     return slug
+
 
 def generate_toc(md_text: str, min_level=1, max_level=6) -> str:
     """
@@ -38,12 +41,14 @@ def generate_toc(md_text: str, min_level=1, max_level=6) -> str:
                 toc_lines.append(f"{indent}- [{clean_title}](#{anchor})")
     return "\n".join(toc_lines)
 
+
 def replace_toc_marker(content: str, toc: str) -> str:
     """
     替换 -[toc]/-[TOC] 占位符为生成的 TOC
     """
     pattern = re.compile(r"-\[toc\]", re.IGNORECASE)
     return pattern.sub(toc, content)
+
 
 def main(md_file: str):
     path = Path(md_file)
@@ -61,6 +66,7 @@ def main(md_file: str):
     new_content = replace_toc_marker(content, toc)
     path.write_text(new_content, encoding="utf-8")
     print(f"✅ TOC 已成功写入文件：{md_file}")
+
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
