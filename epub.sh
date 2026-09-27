@@ -31,9 +31,16 @@ if ! type xelatex >/dev/null 2>&1; then
 	sudo apt-get update
 	sudo apt-get install texlive-full -y >/dev/null
     sudo apt-get install texlive-xetex -y >/dev/null
-    sudo apt-get install texlive-fonts-recommended texlive-fonts-extra -y >/dev/null
+    sudo apt-get install texlive-fonts-recommended texlive-fonts-extra fonts-sourcesanspro -y >/dev/null
     sudo tlmgr install sourcesans
 fi
+
+echo "=== TeX environment ==="
+xelatex --version | head -n 2
+echo "=== sourcesans ==="
+kpsewhich sourcesans.sty || true
+echo "=== apt packages ==="
+dpkg -l | grep -E 'texlive|sourcesans' || true
 
 echo "Generate title.txt"
 echo -e "---\ntitle: \"arts: algorithm, review, tip and share\"\n\
