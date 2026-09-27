@@ -32,6 +32,7 @@ if ! type xelatex >/dev/null 2>&1; then
 	sudo apt-get install texlive-full -y >/dev/null
     sudo apt-get install texlive-xetex -y >/dev/null
     sudo apt-get install texlive-fonts-recommended texlive-fonts-extra -y >/dev/null
+    sudo tlmgr install sourcesans
 fi
 
 echo "Generate title.txt"
