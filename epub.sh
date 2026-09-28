@@ -32,6 +32,8 @@ if ! type xelatex >/dev/null 2>&1; then
 	sudo apt-get install texlive-full -y >/dev/null
     sudo apt-get install texlive-xetex -y >/dev/null
     sudo apt-get install texlive-fonts-recommended texlive-fonts-extra fonts-sourcesanspro -y >/dev/null
+
+    sudo tlmgr init-usertree
     sudo tlmgr install sourcesans
 fi
 
