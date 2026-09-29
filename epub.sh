@@ -26,21 +26,72 @@ if ! type pandoc >/dev/null 2>&1; then
 	sudo dpkg -i pandoc-$tag-1-amd64.deb >/dev/null
 fi
 
-if ! type xelatex >/dev/null 2>&1; then
-	echo "Install latex"
-	sudo apt-get update
-	sudo apt-get install texlive-full -y >/dev/null
-    sudo apt-get install texlive-xetex -y >/dev/null
-    sudo apt-get install texlive-fonts-recommended texlive-fonts-extra fonts-sourcesanspro -y >/dev/null
+if ! type xelatex >/dev/null 2>&1 || \
+   ! kpsewhich sourcesans.sty >/dev/null 2>&1; then
 
-    sudo tlmgr init-usertree
-    sudo tlmgr install sourcesans
+	echo "Install latex / sourcesans"
+
+	sudo apt-get update
+
+	sudo apt-get install -y \
+		texlive-xetex \
+		texlive-latex-extra \
+		texlive-fonts-recommended \
+		texlive-fonts-extra \
+		texlive-lang-chinese \
+		unzip \
+		wget
+
+	# --------------------------------------------------------
+	# Install Source Sans
+	# --------------------------------------------------------
+	#
+	# 不使用 tlmgr，避免 Debian TeX Live 与 CTAN 版本不一致。
+	#
+	# 当前 CTAN:
+	# https://ctan.org/pkg/sourcesans
+	#
+	# TDS:
+	# https://mirrors.ctan.org/install/fonts/sourcesans.tds.zip
+
+	TEXMFLOCAL="/usr/local/share/texmf"
+	SOURCESANS_TDS="sourcesans.tds.zip"
+
+	if ! kpsewhich sourcesans.sty >/dev/null 2>&1; then
+		echo "Install Source Sans from CTAN"
+
+		wget -q --show-progress \
+			https://mirrors.ctan.org/install/fonts/sourcesans.tds.zip \
+			-O "$SOURCESANS_TDS"
+
+		sudo mkdir -p "$TEXMFLOCAL"
+
+		sudo unzip -q \
+			"$SOURCESANS_TDS" \
+			-d "$TEXMFLOCAL"
+
+		# 更新 TeX 文件数据库
+		sudo mktexlsr "$TEXMFLOCAL"
+
+		rm -f "$SOURCESANS_TDS"
+	fi
 fi
 
 echo "=== TeX environment ==="
+if ! type xelatex >/dev/null 2>&1; then
+	echo "ERROR: xelatex is not installed"
+	exit 1
+fi
 xelatex --version | head -n 2
+
 echo "=== sourcesans ==="
-kpsewhich sourcesans.sty || true
+SOURCESANS_PATH=$(kpsewhich sourcesans.sty || true)
+if [ -z "$SOURCESANS_PATH" ]; then
+	echo "ERROR: sourcesans.sty not found"
+	exit 1
+fi
+echo "sourcesans.sty: $SOURCESANS_PATH"
+
 echo "=== apt packages ==="
 dpkg -l | grep -E 'texlive|sourcesans' || true
 
@@ -121,7 +172,12 @@ for file in `ls build/*`; do
 done
 
 echo "Generate epub file using pandoc"
-pandoc -o arts.epub title.txt README.md build/*.md --epub-cover-image=images/header.png
+pandoc \
+	-o arts.epub \
+	title.txt \
+	README.md \
+	build/*.md \
+	--epub-cover-image=images/header.png
 
 # 替换添加 pdf 模板的 mate 信息
 echo "Add meta data"
@@ -173,7 +229,18 @@ sed -i "s/webp)/jpg)/g" `grep -rl "webp)" ./build`
 
 echo "Generate pdf file using pandoc"
 # 利用 eisvogel 模板（Wandmalfarbe/pandoc-latex-template）直接生成 PDF
-pandoc README.md build/*.md -o arts.pdf --from markdown --template code/eisvogel --listings --pdf-engine=xelatex -V CJKmainfont="KaiTi" -V colorlinks -V urlcolor=NavyBlue --toc
+pandoc \
+	README.md \
+	build/*.md \
+	-o arts.pdf \
+	--from markdown \
+	--template code/eisvogel \
+	--listings \
+	--pdf-engine=xelatex \
+	-V CJKmainfont="KaiTi" \
+	-V colorlinks \
+	-V urlcolor=NavyBlue \
+	--toc
 
 if [ -d "build" ]; then
 	echo "Remove temporary folder"
