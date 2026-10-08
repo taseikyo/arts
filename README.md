@@ -62,7 +62,7 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 
 ## Calendar
 
-Excellent! 120 posts in total. Keep going!
+Amazing! 121 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
@@ -90,6 +90,7 @@ Excellent! 120 posts in total. Keep going!
 | [202503W3](weekly/202503W3.md) | [202503W4](weekly/202503W4.md) | [202607W2](weekly/202607W2.md) | [202607W3](weekly/202607W3.md) | [202607W4](weekly/202607W4.md) |
 | [202607W5](weekly/202607W5.md) | [202608W1](weekly/202608W1.md) | [202608W2](weekly/202608W2.md) | [202608W3](weekly/202608W3.md) | [202608W4](weekly/202608W4.md) |
 | [202609W1](weekly/202609W1.md) | [202609W2](weekly/202609W2.md) | [202609W3](weekly/202609W3.md) | [202609W4](weekly/202609W4.md) | [202610W1](weekly/202610W1.md) |
+| [202610W2](weekly/202610W2.md) | | | | | |
 
 ## List
 
@@ -97,6 +98,7 @@ Excellent! 120 posts in total. Keep going!
 
 #### 十月
 
+- [第 121 期：厌屋及乌：为什么你讨厌一个人，连他推荐的好东西也不想碰？](weekly/202610W2.md)
 - [第 120 期：企业家精神与创造性破坏](weekly/202610W1.md)
 
 #### 九月
