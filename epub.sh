@@ -181,7 +181,7 @@ pandoc \
 
 # 替换添加 pdf 模板的 mate 信息
 echo "Add meta data"
-metafile=code/meta.txt
+metafile=data/meta.txt
 curtime=$(date "+%Y-%m-%d")
 newstr="date: \"${curtime}\""
 line=$(grep -n "date" $metafile | head -n 1 | cut -d":"  -f1)
@@ -199,14 +199,14 @@ mv README.tmp.md README.md
 
 # 安装楷体
 echo "Install font (KaiTi)"
-tar xf code/simkai.tar.gz
+tar xf data/simkai.tar.gz
 sudo cp simkai.ttf /usr/share/fonts/
 sudo mkfontscale
 sudo mkfontdir
 sudo fc-cache
 # if [ $(fc-list :lang=zh | grep kai | wc -l) -eq 0 ]; then
 # 	echo "Install font (KaiTi)"
-# 	tar xf code/simkai.tar.gz
+# 	tar xf data/simkai.tar.gz
 # 	sudo cp simkai.ttf /usr/share/fonts/
 # 	sudo mkfontscale
 # 	sudo mkfontdir
@@ -234,7 +234,7 @@ pandoc \
 	build/*.md \
 	-o arts.pdf \
 	--from markdown \
-	--template code/eisvogel \
+	--template data/eisvogel \
 	--listings \
 	--pdf-engine=xelatex \
 	-V CJKmainfont="KaiTi" \
@@ -254,4 +254,4 @@ fi
 
 echo "Reset README.md"
 git checkout README.md
-git checkout code/meta.txt
+git checkout data/meta.txt
