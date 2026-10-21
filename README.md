@@ -62,7 +62,7 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 
 ## Calendar
 
-Outstanding! 122 posts in total. Keep going!
+Nice! 123 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
@@ -90,7 +90,7 @@ Outstanding! 122 posts in total. Keep going!
 | [202503W3](weekly/202503W3.md) | [202503W4](weekly/202503W4.md) | [202607W2](weekly/202607W2.md) | [202607W3](weekly/202607W3.md) | [202607W4](weekly/202607W4.md) |
 | [202607W5](weekly/202607W5.md) | [202608W1](weekly/202608W1.md) | [202608W2](weekly/202608W2.md) | [202608W3](weekly/202608W3.md) | [202608W4](weekly/202608W4.md) |
 | [202609W1](weekly/202609W1.md) | [202609W2](weekly/202609W2.md) | [202609W3](weekly/202609W3.md) | [202609W4](weekly/202609W4.md) | [202610W1](weekly/202610W1.md) |
-| [202610W2](weekly/202610W2.md) | [202610W3](weekly/202610W3.md) | | | | |
+| [202610W2](weekly/202610W2.md) | [202610W3](weekly/202610W3.md) | [202610W4](weekly/202610W4.md) | | | |
 
 ## List
 
@@ -98,6 +98,7 @@ Outstanding! 122 posts in total. Keep going!
 
 #### 十月
 
+- [第 123 期：吊桥效应](weekly/202610W4.md)
 - [第 122 期：凡勃伦效应与恩格尔定律](weekly/202610W3.md)
 - [第 121 期：厌屋及乌：为什么你讨厌一个人，连他推荐的好东西也不想碰？](weekly/202610W2.md)
 - [第 120 期：企业家精神与创造性破坏](weekly/202610W1.md)
@@ -112,7 +113,7 @@ Outstanding! 122 posts in total. Keep going!
 #### 八月
 
 - [第 115 期：帕累托改进](weekly/202608W4.md)
-- [第 114 期：沉没成本 边际成本 机会成本](weekly/202608W3.md)
+- [第 114 期：沉没成本、边际成本与机会成本](weekly/202608W3.md)
 - [第 113 期：西瓜效应](weekly/202608W2.md)
 - [第 112 期：比较优势原理](weekly/202608W1.md)
 
