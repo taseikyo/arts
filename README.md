@@ -62,7 +62,7 @@ tian@ubuntu:/mnt/f/GitHub/arts$ ./epub.sh
 
 ## Calendar
 
-Outstanding! 124 posts in total. Keep going!
+Outstanding! 125 posts in total. Keep going!
 
 |            :shipit:            |        :jack_o_lantern:        |             :beer:             |           :fish_cake:          |            :octocat:           |
 |:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|:------------------------------:|
@@ -90,11 +90,15 @@ Outstanding! 124 posts in total. Keep going!
 | [202503W3](weekly/202503W3.md) | [202503W4](weekly/202503W4.md) | [202607W2](weekly/202607W2.md) | [202607W3](weekly/202607W3.md) | [202607W4](weekly/202607W4.md) |
 | [202607W5](weekly/202607W5.md) | [202608W1](weekly/202608W1.md) | [202608W2](weekly/202608W2.md) | [202608W3](weekly/202608W3.md) | [202608W4](weekly/202608W4.md) |
 | [202609W1](weekly/202609W1.md) | [202609W2](weekly/202609W2.md) | [202609W3](weekly/202609W3.md) | [202609W4](weekly/202609W4.md) | [202610W1](weekly/202610W1.md) |
-| [202610W2](weekly/202610W2.md) | [202610W3](weekly/202610W3.md) | [202610W4](weekly/202610W4.md) | [202610W5](weekly/202610W5.md) | | |
+| [202610W2](weekly/202610W2.md) | [202610W3](weekly/202610W3.md) | [202610W4](weekly/202610W4.md) | [202610W5](weekly/202610W5.md) | [202611W1](weekly/202611W1.md) |
 
 ## List
 
 ### 2026
+
+#### 十一月
+
+- [第 125 期：社会惰化](weekly/202611W1.md)
 
 #### 十月
 
