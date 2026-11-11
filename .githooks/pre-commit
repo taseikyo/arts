@@ -7,6 +7,7 @@ echo "🔍 pre-commit hook 正在执行：检查链接是否重复..."
 whitelist=(
     '^https://unsplash\.com/@equeen(/.*)?$'
     '^https://unsplash.com/@matt909(/.*)?$'
+    '^https://unsplash.com/@mrtiger(/.*)?$'
     '^https://leetcode\.cn/problems/[^/]+.*$'
     '^https://zishutongji.zaixianapp.cn.*$'
     '^https://music.163.com/#/song.*$'
